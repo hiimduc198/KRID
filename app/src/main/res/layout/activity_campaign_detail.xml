@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/scrollView1"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".campaign_detail.CampaignDetail"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".campaign_detail.CampaignDetail">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -14,8 +15,9 @@
         android:gravity="center"
         android:text="KRID"
         android:textSize="24dp" />
-<!--    android:weightSum="10"-->
-    <ScrollView android:id="@+id/linearLayout1"
+    <!--    android:weightSum="10"-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:isScrollContainer="true"
@@ -24,8 +26,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_14"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/dp_14">
 
             <TextView
                 android:id="@+id/txt_my_campaign"
@@ -33,9 +35,9 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="10dp"
                 android:text="My campaign"
-                app:layout_constraintStart_toStartOf="parent"
                 android:textColor="#B9256A"
-                />
+                app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/txt_campaign_title"
                 android:layout_width="match_parent"
@@ -47,16 +49,19 @@
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayoutCampaign"
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/dp_10"
                 android:layout_height="wrap_content"
-                />
+                android:layout_marginTop="@dimen/dp_10"
+                app:tabIndicatorColor="#B9256A"
+                app:tabIndicatorHeight="1dp"
+                app:tabSelectedTextColor="#B9256A"
+                app:tabTextColor="#000000" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-            </LinearLayout>
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

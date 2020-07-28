@@ -9,6 +9,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_campaign_detail);
+        setContentView(R.layout.fragment_campaign_detail);
     }
 }

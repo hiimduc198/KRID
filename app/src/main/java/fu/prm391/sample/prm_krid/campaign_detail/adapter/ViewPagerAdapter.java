@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-public class ViewPager extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<Fragment> fragmentList;
+    private ArrayList<Fragment> fragmentList = new ArrayList<Fragment>();
 
     /**
      * Constructor for {@link FragmentPagerAdapter}.
@@ -24,8 +24,8 @@ public class ViewPager extends FragmentPagerAdapter {
      * @param behavior determines if only current fragments are in a resumed state
      */
 
-    public ViewPager(@NonNull FragmentManager fm, int behavior) {
-        super(fm, behavior);
+    public ViewPagerAdapter(@NonNull FragmentManager fm) {
+        super(fm);
     }
 
     /**
