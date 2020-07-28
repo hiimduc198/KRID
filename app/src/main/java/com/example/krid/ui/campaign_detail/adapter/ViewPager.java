@@ -1,4 +1,4 @@
-package fu.prm391.sample.prm_krid.campaign_detail.adapter;
+package com.example.krid.ui.campaign_detail.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

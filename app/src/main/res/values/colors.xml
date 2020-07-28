@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+<!--    <color name="colorAccent">#03DAC5</color>-->
+    <color name="white_alpha_15">#26000000</color>
+
     <color name="colorPrimary">#d11aff</color>
     <color name="colorPrimaryDark">#8f00b3</color>
-
-
     <color name="colorAccent">#ff4dff</color>
 
     <color name="theme_ads_bg_color">#303030</color>
