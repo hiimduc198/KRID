@@ -32,7 +32,7 @@
 
             <TextView
                 android:id="@+id/textview_format"
-                android:layout_width="wrap_content"
+                android:layout_width="0.5in"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:fontFamily="casual"
@@ -41,7 +41,7 @@
 
             <Button
                 android:id="@+id/btn_format_checkin"
-                android:layout_width="wrap_content"
+                android:layout_width="0.75in"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#F1A5A5"
@@ -50,7 +50,7 @@
 
             <Button
                 android:id="@+id/btn_format_review"
-                android:layout_width="wrap_content"
+                android:layout_width="0.75in"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#E474E4"
@@ -67,7 +67,7 @@
 
             <TextView
                 android:id="@+id/textview_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0.5in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="3"
@@ -77,7 +77,7 @@
 
             <EditText
                 android:id="@+id/txt_title"
-                android:layout_width="wrap_content"
+                android:layout_width="1.4in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -104,7 +104,7 @@
 
             <EditText
                 android:id="@+id/txt_number_inf"
-                android:layout_width="wrap_content"
+                android:layout_width="1.4in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -146,7 +146,7 @@
 
             <TextView
                 android:id="@+id/texview_apply_time"
-                android:layout_width="wrap_content"
+                android:layout_width="0.6in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="3"
@@ -156,7 +156,7 @@
 
             <EditText
                 android:id="@+id/txt_apply_time"
-                android:layout_width="wrap_content"
+                android:layout_width="1.4in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -181,7 +181,7 @@
 
             <EditText
                 android:id="@+id/txt_review_time"
-                android:layout_width="wrap_content"
+                android:layout_width="1.35in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="2"
@@ -207,7 +207,7 @@
 
             <EditText
                 android:id="@+id/txt_approval_time"
-                android:layout_width="wrap_content"
+                android:layout_width="1.4in"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"

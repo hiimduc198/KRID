@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_kols_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="@string/text_kols_info"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/img_kols_detail"
+                android:layout_width="match_parent"
+                android:layout_height="269dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                tools:srcCompat="@drawable/logo_homepage" />
+
+            <TextView
+                android:id="@+id/txt_description_kols_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:text="She is a human of fot dhe ldosen ifdd. And ddef kvdoejx driskfvvjswse. 23ijcdn nxsfricj d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="@string/full_name" />
+
+                <TextView
+                    android:id="@+id/txt_name_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="ABC" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="183dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="@string/text_dob_kols" />
+
+                <TextView
+                    android:id="@+id/txt_dob_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="11/11/1999" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="@string/text_field_kols" />
+
+                <TextView
+                    android:id="@+id/txt_field_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Beauty" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:fontFamily="casual"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="City" />
+
+                <TextView
+                    android:id="@+id/txt_city_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Ha Noi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:fontFamily="casual"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Gender" />
+
+                <TextView
+                    android:id="@+id/txt_gender_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Male" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Group" />
+
+                <TextView
+                    android:id="@+id/txt_group_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Hot Teen" />
+            </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="1in"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Facebook" />
+
+            <TextView
+                android:id="@+id/txt_facebook_kols_detail"
+                android:layout_width="1in"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="fb.com/quynhrin111" />
+        </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Follower" />
+
+                <TextView
+                    android:id="@+id/txt_follower_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="362.025" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Interaction" />
+
+                <TextView
+                    android:id="@+id/txt_interact_kols_detail"
+                    android:layout_width="1in"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="15000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_call_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/dimen_100dp"
+                android:backgroundTint="#EDA2FA"
+                android:fontFamily="casual"
+                android:text="Call to Booking" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@ public class MyCampaignFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         myCampaignViewModel =
                 ViewModelProviders.of(this).get(MyCampaignViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_mycampaign, container, false);
+        View root = inflater.inflate(R.layout.fragment_mycampaigninf, container, false);
         final TextView textView = root.findViewById(R.id.text_my_campaign);
         myCampaignViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

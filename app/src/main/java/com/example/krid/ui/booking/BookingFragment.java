@@ -22,13 +22,7 @@ public class BookingFragment extends Fragment {
         bookingViewModel =
                 ViewModelProviders.of(this).get(BookingViewModel.class);
         View root = inflater.inflate(R.layout.fragment_booking, container, false);
-        final TextView textView = root.findViewById(R.id.text_booking);
-        bookingViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }
