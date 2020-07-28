@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PRM_KRID</string>
+    <string-array name="field_register">
+        <item>Field</item>
+        <item>Fashion</item>
+        <item>Travel</item>
+        <item>Make up</item>
+        <item>Food</item>
+        <item>Entertainment</item>
+        <item>Medicine</item>
+        <item>Education</item>
+    </string-array>
+</resources>
