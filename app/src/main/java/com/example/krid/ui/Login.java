@@ -1,14 +1,16 @@
-package fu.prm391.sample.prm_krid;
+package com.example.krid.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.krid.R;
+
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_campaign_detail);
+        setContentView(R.layout.activity_login);
     }
 }

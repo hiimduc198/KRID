@@ -1,4 +1,4 @@
-package fu.prm391.sample.prm_krid.campaign_detail.adapter;
+package com.example.krid.ui.campaign_detail.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPager extends FragmentPagerAdapter {
 
-    private ArrayList<Fragment> fragmentList = new ArrayList<Fragment>();
+    private ArrayList<Fragment> fragmentList;
 
     /**
      * Constructor for {@link FragmentPagerAdapter}.
@@ -24,8 +24,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
      * @param behavior determines if only current fragments are in a resumed state
      */
 
-    public ViewPagerAdapter(@NonNull FragmentManager fm) {
-        super(fm);
+    public ViewPager(@NonNull FragmentManager fm, int behavior) {
+        super(fm, behavior);
     }
 
     /**
