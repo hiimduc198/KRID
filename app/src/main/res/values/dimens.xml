@@ -5,6 +5,13 @@
 
 
 
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_140">140dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
     <dimen name="slidingmenu_offset">60dp</dimen>
     <dimen name="list_padding">10dp</dimen>
     <dimen name="shadow_width">15dp</dimen>
@@ -58,4 +65,6 @@
     <dimen name="text_size_50sp">50sp</dimen>
     <dimen name="top_items">100dp</dimen>
     <dimen name="dimen_100dp">100dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="sp_16">16sp</dimen>
 </resources>
