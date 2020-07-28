@@ -23,13 +23,7 @@ public class CampaignFragment extends Fragment {
         campaignViewModel =
                 ViewModelProviders.of(this).get(CampaignViewModel.class);
         View root = inflater.inflate(R.layout.fragment_campaign, container, false);
-        final TextView textView = root.findViewById(R.id.text_campaign);
-        campaignViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }
