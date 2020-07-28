@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.krid.ui.booking">
+    package="com.example.krid">
 
     <application
         android:allowBackup="true"
@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".campaign_detail.CampaignDetail"></activity>
-        <activity android:name=".Register_2" />
-        <activity android:name=".Register_1" />
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.campaign_detail.CampaignDetail"></activity>
+        <activity android:name=".ui.Register_2" />
+        <activity android:name=".ui.Register_1" />
+        <activity android:name=".ui.Login" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

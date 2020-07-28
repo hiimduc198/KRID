@@ -1,8 +1,10 @@
-package fu.prm391.sample.prm_krid;
+package com.example.krid.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.krid.R;
 
 public class Login extends AppCompatActivity {
 

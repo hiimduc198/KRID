@@ -1,10 +1,12 @@
-package fu.prm391.sample.prm_krid;
+package com.example.krid.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.krid.R;
 
 public class Register_2 extends AppCompatActivity {
     Spinner spinner = findViewById(R.id.field_register);
