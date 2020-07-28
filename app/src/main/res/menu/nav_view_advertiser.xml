@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:id="@+id/menu_advertise" >
+        <item
+            android:id="@+id/adv_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/adv_booking"
+            android:icon="@drawable/ic_menu_booking"
+            android:title="@string/menu_booking" />
+        <item
+            android:id="@+id/adv_create_campaign"
+            android:icon="@drawable/ic_menu_create_campaign"
+            android:title="@string/menu_create_campaign" />
+        <item
+            android:id="@+id/adv_mycampaign_adv"
+            android:icon="@drawable/ic_menu_mycampaign"
+            android:title="@string/menu_mycampaign" />
+        <item
+            android:id="@+id/adv_manage_delivery"
+            android:icon="@drawable/ic_menu_manage_delivery"
+            android:title="@string/menu_manage_delivery" />
+        <item
+            android:id="@+id/adv_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

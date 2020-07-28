@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/activity_vertical_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/texview_title_create02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/textview_title_create_02"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_50dp"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="@string/textview_description_creatcampaign" />
+
+            <EditText
+                android:id="@+id/txt_description_creatcampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="142dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:gravity="start|top"
+                android:hint="@string/textview_description_creatcampaign"
+                android:inputType="textMultiLine" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:text="@string/textview_sendgoods_createcampaign" />
+
+            <CheckBox
+                android:id="@+id/cbx_sendgoods_createcampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:fontFamily="casual"
+                android:text="@string/checkbox_send" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chekcin"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:text="@string/text_checkin_creatcampaign" />
+
+            <CheckBox
+                android:id="@+id/cbx_checkin_createcampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:fontFamily="casual"
+                android:text="@string/checkbox_send_location" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_createcampaign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="4"
+                app:srcCompat="@mipmap/bg_image_placeholder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:fontFamily="casual"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:text="@string/textview_importimg_creeatcampaign" />
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:hint="@android:string/copyUrl"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btn_upload_img_createcampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_purple"
+                android:fontFamily="casual"
+                android:text="@string/btn_upload_img_createcampaign" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next_creatcampaign02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_50dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/btn_next" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
