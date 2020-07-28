@@ -9,7 +9,7 @@ public class CampaignViewModel extends ViewModel {
 
     public CampaignViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is campaign fragment");
+
     }
 
     public LiveData<String> getText() {

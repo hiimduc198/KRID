@@ -329,4 +329,16 @@
     <string name="text_female">Female</string>
     <string name="text_gender">Gender</string>
     <string name="text_influencer_group">Influencer Group</string>
+    <string name="text_btn_status">Status</string>
+    <string name="text_campaign_name">LiNing Campaign</string>
+    <string name="text_btn_period">Period</string>
+    <string name="text_kols_info">Information</string>
+    <string name="text_dob_kols">D.O.B</string>
+    <string name="text_field_kols">Field</string>
+    <string name="text_campaigninf_none">"Oops, you don't have any campaign! "</string>
+    <string name="text_mycampaigninf_search">Search Now!!!</string>
+    <string name="text_booking_kols">KOLs</string>
+    <string name="btn_text_becomeadv">Become an Advertiser</string>
+    <string name="text_btn_become_inf">Become an Influencer</string>
+    <string name="text_btn_becomeadv">Become An Advertiser</string>
 </resources>
