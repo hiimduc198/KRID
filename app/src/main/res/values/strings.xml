@@ -329,5 +329,11 @@
     <string name="text_female">Female</string>
     <string name="text_gender">Gender</string>
     <string name="text_influencer_group">Influencer Group</string>
+    <string name="no_influencer">Number of influencer needed</string>
+    <string name="campaign_name">Campaign Name</string>
+    <string name="posting_day">posting day</string>
+    <string name="apply_time">Apply Time</string>
+    <string name="review_time">Review Time</string>
+    <string name="approval_time">Approval Time</string>
 
 </resources>
