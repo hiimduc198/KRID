@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="@string/campaign_name" />
+            android:text="Campaign Name" />
 
         <EditText
             android:id="@+id/edtCampaignName"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="@string/no_influencer" />
+            android:text="Number of influencer Needed" />
 
         <EditText
             android:id="@+id/edtNoOfInfluencer"
@@ -192,7 +192,7 @@
                 android:layout_marginBottom="@dimen/dp_14"
                 android:background="@drawable/backgroud_white_border_4dp"
                 android:padding="@dimen/dp_5"
-                android:text="Luu Thay Doi"
+                android:text="Save Changes"
                 android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
