@@ -1,0 +1,3 @@
+[submodule "KRID.git"]
+	path = KRID.git
+	url = ./

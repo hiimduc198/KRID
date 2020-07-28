@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:id="@+id/menu_influence" >
+        <item
+            android:id="@+id/inf_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/inf_campaign"
+            android:icon="@drawable/ic_menu_campaing"
+            android:title="@string/menu_campaign" />
+        <item
+            android:id="@+id/inf_mycampaign"
+            android:icon="@drawable/ic_menu_mycampaign"
+            android:title="@string/menu_mycampaign" />
+        <item
+            android:id="@+id/inf_account"
+            android:icon="@drawable/ic_menu_account"
+            android:title="@string/menu_account" />
+        <item
+            android:id="@+id/inf_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

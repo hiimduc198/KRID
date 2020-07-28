@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/advertise_navigation"
+    app:startDestination="@+id/adv_home">
+
+    <fragment
+        android:id="@+id/adv_home"
+        android:name="com.example.krid.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/adv_booking"
+        android:name="com.example.krid.ui.booking.BookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_booking" />
+    <fragment
+        android:id="@+id/adv_create_campaign"
+        android:name="com.example.krid.ui.createcampaign.CreateCampaignFragment"
+        android:label="Create Campaign"
+        tools:layout="@layout/fragment_create_campaign" />
+
+    <fragment
+        android:id="@+id/adv_mycampaign_adv"
+        android:name="com.example.krid.ui.mycampaign_adv.MyCampaignAdvFragment"
+        android:label="Advertise Campaign"
+        tools:layout="@layout/fragment_mycampaignadv" />
+    <fragment
+        android:id="@+id/adv_manage_delivery"
+        android:name="com.example.krid.ui.manage_delivery.ManageFragment"
+        android:label="Manage Delivery"
+        tools:layout="@layout/fragment_manage_delivery" />
+    <fragment
+        android:id="@+id/adv_logout"
+        android:name="com.example.krid.ui.logout.LogoutFragment"
+        android:label="Log Out"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
