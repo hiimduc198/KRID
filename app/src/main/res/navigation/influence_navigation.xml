@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/influence_navigation"
+    app:startDestination="@id/inf_home">
+
+    <fragment
+        android:id="@+id/inf_home"
+        android:name="com.example.krid.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/inf_campaign"
+        android:name="com.example.krid.ui.campaign.CampaignFragment"
+        android:label="Create Campaign"
+        tools:layout="@layout/fragment_campaign" />
+
+    <fragment
+        android:id="@+id/inf_mycampaign"
+        android:name="com.example.krid.ui.mycampaign.MyCampaignFragment"
+        android:label="Advertise Campaign"
+        tools:layout="@layout/fragment_mycampaign" />
+    <fragment
+        android:id="@+id/inf_account"
+        android:name="com.example.krid.ui.account_detail.AccountDetailFragment"
+        android:label="Account Deatail"
+        tools:layout="@layout/fragment_account_detail" />
+    <fragment
+        android:id="@+id/inf_logout"
+        android:name="com.example.krid.ui.logout.LogoutFragment"
+        android:label="Log Out"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
