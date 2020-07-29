@@ -27,6 +27,8 @@ public class Register2Fragment extends Fragment {
 
     private Advertiser adv;
 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_register_2, container, false);
@@ -48,8 +50,6 @@ public class Register2Fragment extends Fragment {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.field_register, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnField.setAdapter(adapter);
-
-        getActivity().getActionBar().hide();
 
         return root;
     }

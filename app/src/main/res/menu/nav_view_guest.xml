@@ -23,7 +23,7 @@
             android:icon="@drawable/ic_menu_login"
             android:title="@string/menu_login" />
         <item
-            android:id="@+id/nav_register"
+            android:id="@+id/nav_register1"
             android:icon="@drawable/ic_menu_register"
             android:title="@string/menu_register" />
     </group>

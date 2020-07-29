@@ -38,51 +38,34 @@ public class Register1Fragment extends Fragment {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callRegister2Activity(v);
+                callRegister2Activity();
             }
         });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callLoginFragment(v);
+                ((com.example.krid.MainActivity) requireActivity()).navigateToLoginFragment();
             }
         });
 
         return root;
     }
 
-    private void callRegister2Activity(View view){
+    private void callRegister2Activity(){
         String userName = inputUserName.getText().toString();
         String password = inputPassword.getText().toString();
 
         if(userName == null || userName.equals("")) {
-            Toast.makeText(getActivity(),"Please input user name.", Toast.LENGTH_SHORT);
+            Toast.makeText(requireActivity(),"Please input user name.", Toast.LENGTH_LONG).show();
         } else if(password == null || password.equals("")) {
-            Toast.makeText(getActivity(),"Please input password.", Toast.LENGTH_SHORT);
+            Toast.makeText(requireActivity(),"Please input password.", Toast.LENGTH_LONG).show();
         } else if(!userName.matches("^[a-z0-9_-]{4,20}$")) {
-            Toast.makeText(getActivity(),"User name contains: alphabet characters, number, '_' and '-', with size: 4 to 20.", Toast.LENGTH_SHORT);
+            Toast.makeText(requireActivity(),"User name contains: alphabet characters, number, '_' or '-', with size: 4 to 20.", Toast.LENGTH_LONG).show();
         } else {
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("adv", adv);
-
-            Fragment register2 = new Register2Fragment();
-            register2.setArguments(bundle);
-
-            FragmentManager fragmentManager = getFragmentManager();
-            FragmentTransaction ft = fragmentManager.beginTransaction();
-            ft.replace(R.id.container, register2);
-            ft.addToBackStack("");
-            ft.commit();
+            adv.setUsername(userName);
+            adv.setPassword(password);
+            ((com.example.krid.MainActivity) requireActivity()).navigateToRegister2Fragment(adv);
         }
-    }
-
-    private void callLoginFragment(View view) {
-        Fragment login  = new LoginFragment();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.container, login);
-        ft.addToBackStack("");
-        ft.commit();
     }
 }
