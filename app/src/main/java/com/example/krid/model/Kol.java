@@ -14,11 +14,18 @@ public class Kol {
     private String jobId;
     private String groupId;
     private String description;
+    private String image;
 
     public Kol() {
     }
 
-    public Kol(String id, String name, Date dob, String cityId, String facebook, String facebookFollowers, String numbOfInteractions, int gender, String jobId, String groupId, String description) {
+    public Kol(String name, String description, String image) {
+        this.name = name;
+        this.description = description;
+        this.image = image;
+    }
+
+    public Kol(String id, String name, Date dob, String cityId, String facebook, String facebookFollowers, String numbOfInteractions, int gender, String jobId, String groupId, String description, String image) {
         this.id = id;
         this.name = name;
         this.dob = dob;
@@ -30,6 +37,7 @@ public class Kol {
         this.jobId = jobId;
         this.groupId = groupId;
         this.description = description;
+        this.image = image;
     }
 
     public void setId(String id) {

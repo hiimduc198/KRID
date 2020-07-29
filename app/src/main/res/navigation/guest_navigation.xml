@@ -5,32 +5,38 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.krid.ui.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home"/>
+        <fragment
+            android:id="@+id/nav_home"
+            android:name="com.example.krid.ui.HomeFragment"
+            android:label="@string/menu_home"
+            tools:layout="@layout/fragment_home"/>
 
-    <fragment
-        android:id="@+id/nav_booking"
-        android:name="com.example.krid.ui.BookingFragment"
-        android:label="Booking"
-        tools:layout="@layout/fragment_booking" />
+        <fragment
+            android:id="@+id/nav_booking"
+            android:name="com.example.krid.ui.BookingFragment"
+            android:label="Booking"
+            tools:layout="@layout/fragment_booking" />
 
-    <fragment
-        android:id="@+id/nav_campaign"
-        android:name="com.example.krid.ui.CampaignFragment"
-        android:label="Campaign"
-        tools:layout="@layout/fragment_campaign" />
-    <fragment
-        android:id="@+id/nav_login"
-        android:name="com.example.krid.ui.LoginFragment"
-        android:label="Login"
-        tools:layout="@layout/fragment_login" />
-    <fragment
-        android:id="@+id/nav_signin"
-        android:name="com.example.krid.ui.SigninFragment"
-        android:label="Sigin"
-        tools:layout="@layout/fragment_signin" />
+        <fragment
+            android:id="@+id/nav_campaign"
+            android:name="com.example.krid.ui.CampaignFragment"
+            android:label="Campaign"
+            tools:layout="@layout/fragment_campaign" />
+
+        <fragment
+            android:id="@+id/nav_login"
+            android:name="com.example.krid.ui.LoginFragment"
+            android:label="Login"
+            tools:layout="@layout/fragment_login" />
+        <fragment
+            android:id="@+id/nav_register1"
+            android:name="com.example.krid.ui.Register1Fragment"
+            android:label="Register 1"
+            tools:layout="@layout/fragment_register_1" />
+        <fragment
+            android:id="@+id/nav_register2"
+            android:name="com.example.krid.ui.Register2Fragment"
+            android:label="Register 2"
+            tools:layout="@layout/fragment_register_2" />
 
 </navigation>

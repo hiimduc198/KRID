@@ -1,6 +1,8 @@
 package com.example.krid.model;
 
-public class Advertiser {
+import java.io.Serializable;
+
+public class Advertiser implements Serializable {
     private String id;
     private String name;
     private String email;
@@ -9,6 +11,7 @@ public class Advertiser {
     private String website;
     private String username;
     private String password;
+    private String fieldId;
 
     public Advertiser() {
     }
@@ -54,6 +57,14 @@ public class Advertiser {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getFieldId() {
+        return fieldId;
+    }
+
+    public void setFieldId(String fieldId) {
+        this.fieldId = fieldId;
     }
 
     public void setId(String id) {

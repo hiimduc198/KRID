@@ -32,6 +32,11 @@
         android:label="Manage Delivery"
         tools:layout="@layout/fragment_manage_delivery" />
     <fragment
+        android:id="@+id/adv_mycampaign_account"
+        android:name="com.example.krid.ui.AccountDetailFragment"
+        android:label="Advertise Campaign"
+        tools:layout="@layout/fragment_account_detail_adv" />
+    <fragment
         android:id="@+id/adv_logout"
         android:name="com.example.krid.ui.LogoutFragment"
         android:label="Log Out"
