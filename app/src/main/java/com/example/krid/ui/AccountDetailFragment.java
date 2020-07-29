@@ -1,4 +1,4 @@
-package com.example.krid.ui.createcampaign;
+package com.example.krid.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,12 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.krid.R;
 
-
-public class CreateCampaignFragment extends Fragment {
-    private CreateCampaignViewModel createCampaignViewModel;
-
+public class AccountDetailFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        createCampaignViewModel =
-                ViewModelProviders.of(this).get(CreateCampaignViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_create_campaign, container, false);
+
+        View root = inflater.inflate(R.layout.fragment_account_detail, container, false);
+        final TextView textView = root.findViewById(R.id.text_account_detail);
 
         return root;
     }

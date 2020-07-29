@@ -1,4 +1,4 @@
-package com.example.krid.ui.mycampaign_adv;
+package com.example.krid.ui;
 
 import android.app.Activity;
 import android.content.Intent;

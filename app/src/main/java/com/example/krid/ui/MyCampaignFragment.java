@@ -1,4 +1,4 @@
-package com.example.krid.ui.login;
+package com.example.krid.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,18 +13,12 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.krid.R;
-import com.example.krid.ui.createcampaign.CreateCampaignViewModel;
 
-
-public class LoginFragment extends Fragment {
-
-    private LoginViewModel loginViewModel;
-
+public class MyCampaignFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        loginViewModel =
-                ViewModelProviders.of(this).get(LoginViewModel.class);
-        View root = inflater.inflate(R.layout.activity_login, container, false);
+
+        View root = inflater.inflate(R.layout.fragment_mycampaigninf, container, false);
 
         return root;
     }
