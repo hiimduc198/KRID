@@ -16,7 +16,7 @@ public class AccountDetailFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_account_detail_adv, container, false);
-        final TextView textView = root.findViewById(R.id.text_account_detail);
+
 
         return root;
     }
