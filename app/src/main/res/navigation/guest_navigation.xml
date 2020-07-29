@@ -22,15 +22,21 @@
         android:name="com.example.krid.ui.CampaignFragment"
         android:label="Campaign"
         tools:layout="@layout/fragment_campaign" />
+
     <fragment
         android:id="@+id/nav_login"
         android:name="com.example.krid.ui.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" />
     <fragment
-        android:id="@+id/nav_signin"
-        android:name="com.example.krid.ui.SigninFragment"
-        android:label="Sigin"
-        tools:layout="@layout/fragment_signin" />
+        android:id="@+id/nav_register1"
+        android:name="com.example.krid.ui.Register1Fragment"
+        android:label="Register 1"
+        tools:layout="@layout/fragment_register_1" />
+    <fragment
+        android:id="@+id/nav_register2"
+        android:name="com.example.krid.ui.Register2Fragment"
+        android:label="Register 2"
+        tools:layout="@layout/fragment_register_2" />
 
 </navigation>
