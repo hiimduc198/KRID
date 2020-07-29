@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="Campaign Name" />
+            android:text="Ten Chien Dich" />
 
         <EditText
             android:id="@+id/edtCampaignName"
@@ -68,29 +68,13 @@
             android:layout_marginEnd="@dimen/dp_14"
             android:background="@drawable/backgroud_white_border_4dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_14"
-            android:layout_marginTop="@dimen/dp_20"
-            android:text="Number of influencer Needed" />
-
-        <EditText
-            android:id="@+id/edtNoOfInfluencer"
-            android:layout_width="@dimen/dp_140"
-            android:layout_height="@dimen/dp_30"
-            android:layout_marginStart="@dimen/dp_14"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_marginEnd="@dimen/dp_14"
-            android:background="@drawable/backgroud_white_border_4dp" />
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="@string/posting_day" />
+            android:text="Ten Chien Dich" />
 
         <EditText
             android:layout_width="150dp"
@@ -107,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="@string/apply_time" />
+            android:text="Ten Chien Dich" />
 
 
         <EditText
@@ -124,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="@string/review_time" />
+            android:text="abc" />
 
         <EditText
             android:layout_width="150dp"
@@ -141,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="@string/approval_time" />
+            android:text="Ten Chien Dich" />
 
         <EditText
             android:layout_width="150dp"
@@ -184,16 +168,15 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_14"
                 android:layout_marginTop="@dimen/dp_20"
                 android:layout_marginEnd="@dimen/dp_14"
                 android:layout_marginBottom="@dimen/dp_14"
                 android:background="@drawable/backgroud_white_border_4dp"
                 android:padding="@dimen/dp_5"
-                android:text="Save Changes"
-                android:textSize="16sp" />
+                android:text="Luu Thay Doi"
+                android:textSize="@dimen/sp_16" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
