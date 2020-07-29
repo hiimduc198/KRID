@@ -1,4 +1,4 @@
-package com.example.krid.ui.campaign_detail;
+package com.example.krid.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import android.os.Bundle;
 
 import com.example.krid.R;
-import com.example.krid.ui.campaign_detail.adapter.ViewPager;
+import com.example.krid.adapter.ViewPager;
 
 public class CampaignDetail extends AppCompatActivity {
 

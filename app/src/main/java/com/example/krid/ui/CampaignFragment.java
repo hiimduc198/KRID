@@ -1,4 +1,4 @@
-package com.example.krid.ui.campaign;
+package com.example.krid.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,16 +18,13 @@ import com.example.krid.R;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
-
 public class CampaignFragment extends Fragment {
-    private CampaignViewModel campaignViewModel;
     CarouselView carouselView;
+
     int[] sampleImages = {R.drawable.booking03, R.drawable.home07, R.drawable.home14};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        campaignViewModel =
-                ViewModelProviders.of(this).get(CampaignViewModel.class);
         View root = inflater.inflate(R.layout.fragment_campaign, container, false);
         Toolbar toolbar = (Toolbar) getView().findViewById(R.id.toolbar);
 
@@ -37,6 +34,7 @@ public class CampaignFragment extends Fragment {
         carouselView.setImageListener(imageListener);
         return root;
     }
+
     ImageListener imageListener = new ImageListener() {
         @Override
         public void setImageForPosition(int position, ImageView imageView) {
