@@ -26,7 +26,7 @@
         android:id="@+id/inf_account"
         android:name="com.example.krid.ui.AccountDetailFragment"
         android:label="Account Deatail"
-        tools:layout="@layout/fragment_account_detail" />
+        tools:layout="@layout/fragment_account_detail_adv" />
     <fragment
         android:id="@+id/inf_logout"
         android:name="com.example.krid.ui.LogoutFragment"

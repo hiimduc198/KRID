@@ -43,4 +43,5 @@
     <color name="text_blue_color">#0015ff</color>
     <color name="btn_campaign">#FFE9A9F4</color>
     <color name="white">#ffffff</color>
+    <color name="btn_contact">#F48FB1</color>
 </resources>
