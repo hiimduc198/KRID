@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_20"
-                    android:text="Ten Chien Dich" />
+                    android:text="Post Time" />
 
                 <EditText
                     android:layout_width="150dp"
@@ -96,6 +96,7 @@
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_14"
+                    android:inputType="date"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:drawableLeft="@drawable/ic_calendar" />
 
@@ -105,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_20"
-                    android:text="Ten Chien Dich" />
+                    android:text="Apply Time" />
 
 
                 <EditText
@@ -114,6 +115,7 @@
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_14"
+                    android:inputType="date"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:drawableLeft="@drawable/ic_calendar" />
 
@@ -122,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_20"
-                    android:text="abc" />
+                    android:text="Review Time" />
 
                 <EditText
                     android:layout_width="150dp"
@@ -130,6 +132,7 @@
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_14"
+                    android:inputType="date"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:drawableLeft="@drawable/ic_calendar" />
 
@@ -139,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_20"
-                    android:text="Ten Chien Dich" />
+                    android:text="Approval Time" />
 
                 <EditText
                     android:layout_width="150dp"
@@ -147,6 +150,7 @@
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_14"
+                    android:inputType="date"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:drawableLeft="@drawable/ic_calendar" />
 
@@ -155,16 +159,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_20"
-                    android:text="Ten Chien Dich" />
+                    android:text="Report Name " />
 
                 <EditText
+                    android:id="@+id/edtReportName"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_30"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_14"
-                    android:background="@drawable/backgroud_white_border_4dp"
-                    android:drawableLeft="@drawable/ic_calendar" />
+                    android:background="@drawable/backgroud_white_border_4dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -177,7 +181,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_14"
                         android:layout_marginTop="@dimen/dp_20"
-                        android:text="Huy"
+                        android:text="Cancel"
                         android:textSize="@dimen/sp_16" />
 
                     <TextView
@@ -189,7 +193,7 @@
                         android:layout_marginBottom="@dimen/dp_14"
                         android:background="@drawable/backgroud_white_border_4dp"
                         android:padding="@dimen/dp_5"
-                        android:text="Luu Thay Doi"
+                        android:text="Save Changes"
                         android:textSize="@dimen/sp_16" />
                 </LinearLayout>
             </LinearLayout>
