@@ -1,20 +1,13 @@
-package com.example.krid.adapter;
+package com.example.krid.adapter.campaignadapter;
 
-import android.Manifest;
 import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.krid.R;
@@ -22,24 +15,24 @@ import com.example.krid.model.Campaign;
 
 import java.util.ArrayList;
 
-public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.ViewHolder> {
+public class CampaignListAdapter extends RecyclerView.Adapter<CampaignListAdapter.ViewHolder> {
     private Activity activity;
     private ArrayList<Campaign> campaignList;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView txtId;
         private TextView txtTitle;
+        private TextView txtDescription;
         private ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtId = itemView.findViewById(R.id.id);
-            txtTitle = itemView.findViewById(R.id.title);
+            txtTitle = itemView.findViewById(R.id.tvTitle);
+            txtDescription = itemView.findViewById(R.id.tvShip);
             image = itemView.findViewById(R.id.image);
         }
     }
 
-    public CampaignAdapter(Activity activity, ArrayList<Campaign> campaignList) {
+    public CampaignListAdapter(Activity activity, ArrayList<Campaign> campaignList) {
         this.activity = activity;
         this.campaignList = campaignList;
     }
@@ -48,7 +41,7 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(activity);
-        View campaignItemView = inflater.inflate(R.layout.home_list, parent, false);
+        View campaignItemView = inflater.inflate(R.layout.item_campaign, parent, false);
         ViewHolder viewHolder = new ViewHolder(campaignItemView);
         return viewHolder;
     }
@@ -56,16 +49,10 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         final Campaign Campaign = campaignList.get(position);
-        holder.txtId.setText(Campaign.getId());
         holder.txtTitle.setText(Campaign.getTitle());
+        holder.txtDescription.setText(Campaign.getId());
 
-        holder.image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
 
-            }
-        });
     }
 
     @Override

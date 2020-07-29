@@ -47,6 +47,7 @@
                 android:fontFamily="casual"
                 android:gravity="start|top"
                 android:hint="@string/textview_description_creatcampaign"
+
                 android:inputType="textMultiLine" />
 
         </LinearLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.example.krid.R;
 import com.example.krid.adapter.ViewPager;
 
+
 public class CampaignDetail extends AppCompatActivity {
 
 
