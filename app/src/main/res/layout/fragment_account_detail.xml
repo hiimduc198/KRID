@@ -93,15 +93,21 @@
                     android:text="ktx dai hoc FPT"
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp" />
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="Location"
+                />
 
-                <CheckBox
-                    android:id="@+id/checkIndividual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:text="Individual" />
+                <Spinner
+                    android:id="@+id/spinLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:entries="@array/location"
+                    />
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,14 +125,6 @@
                     android:text="Website.com"
                     android:paddingLeft="20dp" />
 
-                <CheckBox
-                    android:id="@+id/checkWebsite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:text="Doesn't have a website" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -160,81 +158,166 @@
                     android:inputType="phone"
                     android:text="3215646513"
                     android:paddingLeft="20dp" />
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="Location"
+                    android:text="Facebook link"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="https://www.facebook.com/"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Follower Facebook"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_number_followers"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="1000"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Email receive notification"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_notification_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="email@email.com"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Interactions"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_nu_interaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="300"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Gender"
+                    />
+                <RadioGroup
+                    android:id="@+id/rdg_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton
+                        android:id="@+id/rd_gender_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_color"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Male"
+                        />
+                    <RadioButton
+                        android:id="@+id/rd_gender_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_color"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Female"
+                        />
+                    <RadioButton
+                        android:id="@+id/rd_gender_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_color"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Other"
+                        />
+
+                </RadioGroup>
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="mariage status"
+                />
+                <RadioGroup
+                    android:id="@+id/rdg_mariage_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton
+                        android:id="@+id/rd_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_color"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Single"
+                        />
+                    <RadioButton
+                        android:id="@+id/rd_Married"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_color"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Married"
+                        />
+                    <RadioButton
+                        android:id="@+id/rd_mariage_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_color"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Other"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="career"
                     />
 
                 <Spinner
-                    android:id="@+id/spinField"
+                    android:id="@+id/spinner_career"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
-                    android:entries="@array/field_register"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="What campaign do you care of ? "
+                    android:entries="@array/career"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     >
-                    <CheckBox
-                        android:id="@+id/cb_checkin_account_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dimen_100dp"
-                        android:text="Check-in" />
-                    <CheckBox
-                        android:id="@+id/cb_product_account_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:layout_gravity="right"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:text="Product" />
-
-                </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="Your purpose when running an Influencer campaign? "
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:id="@+id/cb_branding_viral"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginRight="68dp"
-                        android:text="Branding/viral" />
-
-                    <CheckBox
-                        android:id="@+id/cb_sale"
-                        android:layout_width="71dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginTop="7dp"
-                        android:text="Sale" />
-
-                </LinearLayout>
-                <Button
+                    <Button
+                        android:id="@+id/btn_cancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Save information"
@@ -244,6 +327,19 @@
                     android:textColor="@color/white"
                     android:paddingHorizontal="@dimen/dp_10"
                     />
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save information"
+                        android:background="@drawable/background_red_border_4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        />
+                </LinearLayout>
+
 
 
 
