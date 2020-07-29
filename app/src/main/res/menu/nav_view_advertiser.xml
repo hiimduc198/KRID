@@ -18,13 +18,17 @@
             android:icon="@drawable/ic_menu_create_campaign"
             android:title="@string/menu_create_campaign" />
         <item
-            android:id="@+id/adv_mycampaign_adv"
+            android:id="@+id/adv_mycampaign"
             android:icon="@drawable/ic_menu_mycampaign"
             android:title="@string/menu_mycampaign" />
         <item
             android:id="@+id/adv_manage_delivery"
             android:icon="@drawable/ic_menu_manage_delivery"
             android:title="@string/menu_manage_delivery" />
+        <item
+            android:id="@+id/adv_account"
+            android:icon="@drawable/ic_menu_account"
+            android:title="@string/menu_account" />
         <item
             android:id="@+id/adv_logout"
             android:icon="@drawable/ic_menu_logout"

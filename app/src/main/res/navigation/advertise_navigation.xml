@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/adv_home"
-        android:name="com.example.krid.ui.HomeFragment"
+        android:name="com.example.krid.ui.HomeAdvFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home_adv"/>
     <fragment
         android:id="@+id/adv_booking"
-        android:name="com.example.krid.ui.BookingFragment"
-        android:label="Booking"
-        tools:layout="@layout/fragment_booking" />
+        android:name="com.example.krid.ui.BookingAdvFragment"
+        android:label="Booking KOLs"
+        tools:layout="@layout/fragment_booking_adv" />
     <fragment
         android:id="@+id/adv_create_campaign"
         android:name="com.example.krid.ui.CreateCampaignFragment"
