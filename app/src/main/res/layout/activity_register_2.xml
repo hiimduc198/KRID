@@ -34,7 +34,7 @@
             android:layout_marginTop="68dp"
             android:background="@drawable/backgroud_white_border_25_dp"
             android:ems="10"
-            android:hint="Company name"
+            android:hint="Email"
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             app:layout_constraintStart_toStartOf="parent"

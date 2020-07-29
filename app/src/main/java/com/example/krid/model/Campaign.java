@@ -61,7 +61,6 @@ public class Campaign {
         this.title = title;
         this.image = image;
     }
-
     public void setId(String id) {
         this.id = id;
     }

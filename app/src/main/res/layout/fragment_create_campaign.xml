@@ -67,7 +67,7 @@
 
             <TextView
                 android:id="@+id/textview_name"
-                android:layout_width="0.5in"
+                android:layout_width="@dimen/dp_130"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="3"
@@ -77,13 +77,16 @@
 
             <EditText
                 android:id="@+id/txt_title"
-                android:layout_width="1.4in"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
+                android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
                 android:hint="@string/title_campaign"
-                android:inputType="textPersonName" />
+                android:fontFamily="casual"
+                android:inputType="textPersonName"
+                android:padding="@dimen/dimen_10dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +97,7 @@
 
             <TextView
                 android:id="@+id/textview_number_inf"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/dp_130"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -104,10 +107,12 @@
 
             <EditText
                 android:id="@+id/txt_number_inf"
-                android:layout_width="1.4in"
+                android:layout_width="@dimen/dp_230"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
+                android:padding="@dimen/dimen_10dp"
+                android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
                 android:inputType="numberSigned" />
         </LinearLayout>
@@ -134,8 +139,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
+                android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:paddingVertical="@dimen/dimen_10dp" />
 
         </LinearLayout>
 
@@ -156,12 +163,14 @@
 
             <EditText
                 android:id="@+id/txt_apply_time"
-                android:layout_width="1.4in"
+                android:layout_width="229dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
+                android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:padding="@dimen/dimen_10dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -181,12 +190,14 @@
 
             <EditText
                 android:id="@+id/txt_review_time"
-                android:layout_width="1.35in"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="2"
+                android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:padding="@dimen/dimen_10dp" />
 
         </LinearLayout>
 
@@ -207,12 +218,14 @@
 
             <EditText
                 android:id="@+id/txt_approval_time"
-                android:layout_width="1.4in"
+                android:layout_width="223dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
+                android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:padding="@dimen/dimen_10dp" />
         </LinearLayout>
 
         <Button
