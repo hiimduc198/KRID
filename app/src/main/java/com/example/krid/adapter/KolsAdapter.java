@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.krid.R;
-import com.example.krid.model.Campaign;
 import com.example.krid.model.Kol;
 
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public class KolsAdapter extends RecyclerView.Adapter<KolsAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(activity);
-        View kolItemView = inflater.inflate(R.layout.kols_items, parent, false);
+        View kolItemView = inflater.inflate(R.layout.item_kols, parent, false);
         ViewHolder viewHolder = new ViewHolder(kolItemView);
         return viewHolder;
     }

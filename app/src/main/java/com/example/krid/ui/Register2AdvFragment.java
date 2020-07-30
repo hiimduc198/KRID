@@ -3,13 +3,11 @@ package com.example.krid.ui;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -21,7 +19,6 @@ import com.example.krid.MainActivity;
 import com.example.krid.R;
 import com.example.krid.adapter.FieldSpinnerAdapter;
 import com.example.krid.database.AdvertiserDao;
-import com.example.krid.database.FieldDao;
 import com.example.krid.model.Advertiser;
 import com.example.krid.model.Field;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,7 +30,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Register2Fragment extends Fragment {
+public class Register2AdvFragment extends Fragment {
     private TextView inputName;
     private TextView inputCompanyName;
     private TextView inputWebsite;
@@ -49,7 +46,7 @@ public class Register2Fragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_register_2, container, false);
+        View root = inflater.inflate(R.layout.fragment_register_2_adv, container, false);
 
         ((MainActivity)getActivity()).getSupportActionBar().setTitle("Register (2)");
 
@@ -60,10 +57,10 @@ public class Register2Fragment extends Fragment {
         inputPhone = root.findViewById(R.id.inputPhone);
         checkIndividual = root.findViewById(R.id.checkIndividual);
         checkWebsite = root.findViewById(R.id.checkWebsite);
-        spnField = root.findViewById(R.id.spinField);
+        spnField = root.findViewById(R.id.spnField);
         btnComplete = root.findViewById(R.id.btnComplete);
 
-        adv = (Advertiser)getArguments().getSerializable("adv");
+        adv = (Advertiser)getArguments().getSerializable("param");
         db = FirebaseFirestore.getInstance();
 
         checkIndividual.setOnCheckedChangeListener(

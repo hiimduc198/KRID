@@ -16,12 +16,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         >
+
         <TextView
 
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="REGISTER AS ADVERTISER"
+            android:text="REGISTER"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,18 +56,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_phone" />
 
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="146dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/button_login"
-            android:onClick="callRegister2Activity"
-            android:text="REGISTER"
-            android:textColor="#FFFFFF"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -74,7 +63,7 @@
             android:layout_marginTop="16dp"
             android:text="--- or you already have an account? ---"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+            app:layout_constraintTop_toBottomOf="@+id/btnRegisterAdv" />
 
         <Button
             android:id="@+id/btnLogin"
@@ -87,6 +76,34 @@
             android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRegisterInf"
+                android:layout_width="142dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_login"
+                android:text="REGISTER as Influence"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+            <Button
+                android:id="@+id/btnRegisterAdv"
+                android:layout_width="137dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_login"
+                android:text="REGISTER as ADVERTISER"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

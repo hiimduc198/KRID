@@ -1,12 +1,8 @@
 package com.example.krid.database;
 
-import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.krid.model.Advertiser;
+import com.example.krid.model.Campaign;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -21,11 +17,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvertiserDao {
+public class CampaignDao {
     public static FirebaseFirestore db = FirebaseFirestore.getInstance();
-    public static CollectionReference collection = db.collection("Advertiser");
+    public static CollectionReference collection = db.collection("Campaign");
 
-    public static void addNewAdvertiser(Advertiser adv) {
+    public static void addNewCampaign(Campaign adv) {
         collection.add(adv)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override

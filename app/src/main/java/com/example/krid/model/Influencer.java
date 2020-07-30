@@ -1,8 +1,9 @@
 package com.example.krid.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Influencer {
+public class Influencer implements Serializable {
     private String id;
     private String name;
     private String email;
