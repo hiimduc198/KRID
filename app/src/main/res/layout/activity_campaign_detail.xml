@@ -336,7 +336,7 @@
                         android:layout_height="150dp"
                         android:paddingVertical="@dimen/dp_5"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/img_campaign_1"
+                        android:src="@drawable/mycampaigm2"
                         />
                     <Button
                         android:layout_width="wrap_content"
