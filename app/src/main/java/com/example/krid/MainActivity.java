@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_adv);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout_adv);
+        NavigationView navigationView = findViewById(R.id.nav_view_adv);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign_adv, R.id.adv_account)
                 .setDrawerLayout(drawer)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_adv);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
@@ -64,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_adv);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
 
     public void navigateToRegister2Fragment(Advertiser adv) {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout_adv);
 
         Fragment fragment = new Register2Fragment();
         Bundle args = new Bundle();
@@ -79,18 +79,18 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction()
                 .addToBackStack("Tag")
-                .replace(R.id.nav_host_fragment, fragment, "Tag")
+                .replace(R.id.nav_host_fragment_adv, fragment, "Tag")
                 .commit();
 
         drawer.closeDrawer(GravityCompat.START);
     }
 
     public void navigateToFragmentWithoutArgs(Fragment fragment) {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout_adv);
 
         getSupportFragmentManager().beginTransaction()
                 .addToBackStack("Tag")
-                .replace(R.id.nav_host_fragment, fragment, "Tag")
+                .replace(R.id.nav_host_fragment_adv, fragment, "Tag")
                 .commit();
 
         drawer.closeDrawer(GravityCompat.START);

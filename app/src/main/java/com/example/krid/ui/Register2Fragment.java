@@ -105,6 +105,7 @@ public class Register2Fragment extends Fragment {
                 adv.setWebsite(inputWebsite.getText().toString());
                 adv.setPhone(inputPhone.getText().toString());
                 adv.setEmail(inputEmail.getText().toString());
+                AdvertiserDao.addNewAdvertiser(adv);
 
                 Toast.makeText(getContext(), "Register success.", Toast.LENGTH_LONG).show();
 
