@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.krid.model.Advertiser;
+import com.example.krid.ui.HomeFragment;
 import com.example.krid.ui.LoginFragment;
 import com.example.krid.ui.Register2Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -84,10 +85,9 @@ public class MainActivity extends AppCompatActivity {
         drawer.closeDrawer(GravityCompat.START);
     }
 
-    public void navigateToLoginFragment() {
+    public void navigateToFragmentWithoutArgs(Fragment fragment) {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
-        Fragment fragment = new LoginFragment();
         getSupportFragmentManager().beginTransaction()
                 .addToBackStack("Tag")
                 .replace(R.id.nav_host_fragment, fragment, "Tag")
