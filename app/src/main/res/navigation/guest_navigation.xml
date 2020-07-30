@@ -31,12 +31,19 @@
         <fragment
             android:id="@+id/nav_register1"
             android:name="com.example.krid.ui.Register1Fragment"
-            android:label="Register 1"
+            android:label="Register (1)"
             tools:layout="@layout/fragment_register_1" />
+
         <fragment
-            android:id="@+id/nav_register2"
-            android:name="com.example.krid.ui.Register2Fragment"
-            android:label="Register 2"
-            tools:layout="@layout/fragment_register_2" />
+            android:id="@+id/nav_register2_adv"
+            android:name="com.example.krid.ui.Register2AdvFragment"
+            android:label="Register advertiser (2)"
+            tools:layout="@layout/fragment_register_2_adv" />
+
+        <fragment
+            android:id="@+id/nav_register2_inf"
+            android:name="com.example.krid.ui.Register2AdvFragment"
+            android:label="Register influence (2)"
+            tools:layout="@layout/fragment_register_2_inf" />
 
 </navigation>

@@ -133,7 +133,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/inputEmail"
+                    android:id="@+id/inputName"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:layout_marginTop="2dp"

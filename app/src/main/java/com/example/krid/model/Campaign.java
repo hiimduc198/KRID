@@ -1,17 +1,20 @@
 package com.example.krid.model;
 
-public class Campaign {
+import java.io.Serializable;
+import java.util.Date;
+
+public class Campaign implements Serializable {
     private String id;
     private String advId;
     private String formatId;
     private String title;
     private String numOfInf;
-    private String postTime;
-    private String applyTime;
-    private String reviewTime;
-    private String approvalTime;
+    private Date postTime;
+    private Date applyTime;
+    private Date reviewTime;
+    private Date approvalTime;
     private String description;
-    private String requireAction;
+    private boolean requireAction;
     private String cityId;
     private String location;
     private String image;
@@ -29,7 +32,7 @@ public class Campaign {
     public Campaign() {
     }
 
-    public Campaign(String id, String advId, String formatId, String title, String numOfInf, String postTime, String applyTime, String reviewTime, String approvalTime, String description, String requireAction, String cityId, String location, String image, String reward, String cash, String hastag, String toDo, String otherInfo, String website, String infGender, String infAgeRange, String infGroupId, String camStatusId) {
+    public Campaign(String id, String advId, String formatId, String title, String numOfInf, Date postTime, Date applyTime, Date reviewTime, Date approvalTime, String description, boolean requireAction, String cityId, String location, String image, String reward, String cash, String hastag, String toDo, String otherInfo, String website, String infGender, String infAgeRange, String infGroupId, String camStatusId) {
         this.id = id;
         this.advId = advId;
         this.formatId = formatId;
@@ -61,6 +64,7 @@ public class Campaign {
         this.title = title;
         this.image = image;
     }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -81,19 +85,19 @@ public class Campaign {
         this.numOfInf = numOfInf;
     }
 
-    public void setPostTime(String postTime) {
+    public void setPostTime(Date postTime) {
         this.postTime = postTime;
     }
 
-    public void setApplyTime(String applyTime) {
+    public void setApplyTime(Date applyTime) {
         this.applyTime = applyTime;
     }
 
-    public void setReviewTime(String reviewTime) {
+    public void setReviewTime(Date reviewTime) {
         this.reviewTime = reviewTime;
     }
 
-    public void setApprovalTime(String approvalTime) {
+    public void setApprovalTime(Date approvalTime) {
         this.approvalTime = approvalTime;
     }
 
@@ -101,7 +105,7 @@ public class Campaign {
         this.description = description;
     }
 
-    public void setRequireAction(String requireAction) {
+    public void setRequireAction(boolean requireAction) {
         this.requireAction = requireAction;
     }
 
@@ -177,19 +181,19 @@ public class Campaign {
         return numOfInf;
     }
 
-    public String getPostTime() {
+    public Date getPostTime() {
         return postTime;
     }
 
-    public String getApplyTime() {
+    public Date getApplyTime() {
         return applyTime;
     }
 
-    public String getReviewTime() {
+    public Date getReviewTime() {
         return reviewTime;
     }
 
-    public String getApprovalTime() {
+    public Date getApprovalTime() {
         return approvalTime;
     }
 
@@ -197,7 +201,7 @@ public class Campaign {
         return description;
     }
 
-    public String getRequireAction() {
+    public boolean getRequireAction() {
         return requireAction;
     }
 

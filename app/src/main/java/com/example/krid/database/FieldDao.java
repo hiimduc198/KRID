@@ -35,20 +35,4 @@ public class FieldDao {
                     }
                 });
     }
-
-    public static List<Field> getAll() {
-        final List<Field> list = new ArrayList<>();
-
-        db.collection("Field").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        list.add(document.toObject(Field.class));
-                    }
-                }
-            }
-        });
-        return list;
-    }
 }

@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.krid.MainActivity;
 import com.example.krid.R;
 
 public class HomeFragment extends Fragment {
@@ -22,7 +23,7 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Home");
         return root;
     }
 
