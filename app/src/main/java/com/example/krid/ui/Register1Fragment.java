@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.krid.MainActivity;
 import com.example.krid.R;
 import com.example.krid.database.AdvertiserDao;
 import com.example.krid.model.Advertiser;
@@ -32,6 +33,8 @@ public class Register1Fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_register_1, container, false);
+
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Register (1)");
 
         adv = new Advertiser();
         inputUserName = root.findViewById(R.id.inputUserName);

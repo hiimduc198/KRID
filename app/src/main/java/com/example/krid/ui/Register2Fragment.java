@@ -17,14 +17,23 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.krid.MainActivity;
 import com.example.krid.R;
+import com.example.krid.adapter.FieldSpinnerAdapter;
 import com.example.krid.database.AdvertiserDao;
 import com.example.krid.database.FieldDao;
 import com.example.krid.model.Advertiser;
 import com.example.krid.model.Field;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Register2Fragment extends Fragment {
-    private Spinner spnField;
     private TextView inputName;
     private TextView inputCompanyName;
     private TextView inputWebsite;
@@ -32,13 +41,17 @@ public class Register2Fragment extends Fragment {
     private TextView inputPhone;
     private CheckBox checkIndividual;
     private CheckBox checkWebsite;
+    private Spinner spnField;
     private Button btnComplete;
 
     private Advertiser adv;
+    private static FirebaseFirestore db;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_register_2, container, false);
+
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Register (2)");
 
         inputName = root.findViewById(R.id.inputName);
         inputCompanyName = root.findViewById(R.id.inputCompanyName);
@@ -51,6 +64,7 @@ public class Register2Fragment extends Fragment {
         btnComplete = root.findViewById(R.id.btnComplete);
 
         adv = (Advertiser)getArguments().getSerializable("adv");
+        db = FirebaseFirestore.getInstance();
 
         checkIndividual.setOnCheckedChangeListener(
                 new CompoundButton.OnCheckedChangeListener() {
@@ -61,6 +75,7 @@ public class Register2Fragment extends Fragment {
                            inputCompanyName.setEnabled(false);
                        } else {
                            inputCompanyName.setHint("Company name");
+                           inputCompanyName.setText("");
                            inputCompanyName.setEnabled(true);
                        }
                    }
@@ -76,24 +91,35 @@ public class Register2Fragment extends Fragment {
                             inputWebsite.setEnabled(false);
                         } else {
                             inputWebsite.setHint("Website");
+                            inputWebsite.setText("");
                             inputWebsite.setEnabled(true);
                         }
                     }
                 }
         );
 
-        ArrayAdapter < Field > adapter = new ArrayAdapter<Field>(getContext(), android.R.layout.simple_spinner_item, FieldDao.getAll());
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnField.setAdapter(adapter);
-        spnField.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                adv.setFieldId(((Field) spnField.getSelectedItem()).getId());
-                Toast.makeText(getContext(), "Field: " + ((Field) spnField.getSelectedItem()).getName(), Toast.LENGTH_LONG).show();
-            }
+        final List<Field> list = new ArrayList<>();
 
+        db.collection("Field").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        list.add(document.toObject(Field.class));
+                    }
+                }
+                FieldSpinnerAdapter adapter = new FieldSpinnerAdapter(getContext(), android.R.layout.simple_spinner_item, list);
+                spnField.setAdapter(adapter);
+                spnField.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                        adv.setFieldId(((Field) spnField.getSelectedItem()).getId());
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parentView) {
+                    }
+                });
             }
         });
 
@@ -105,6 +131,7 @@ public class Register2Fragment extends Fragment {
                 adv.setWebsite(inputWebsite.getText().toString());
                 adv.setPhone(inputPhone.getText().toString());
                 adv.setEmail(inputEmail.getText().toString());
+                AdvertiserDao.addNewAdvertiser(adv);
 
                 Toast.makeText(getContext(), "Register success.", Toast.LENGTH_LONG).show();
 
