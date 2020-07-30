@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-
     <group android:id="@+id/menu_advertise" >
         <item
             android:id="@+id/adv_home"

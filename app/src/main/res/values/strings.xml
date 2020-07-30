@@ -364,6 +364,5 @@
 	<string name="image_for_campaign">image for campaign</string>
     <string name="campaign_title">FABIMILK - Review sản phẩm sữa nhận sản phẩm sữa trị giá 500.000đ và tiền mặt 800.000đ</string>
     <string name="influencer_reward">Tặng 1 lọ sản phẩm trị ho Úc trị giá 395k và 200k tiền mặt</string>
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_post">Posting time</string>
 </resources>

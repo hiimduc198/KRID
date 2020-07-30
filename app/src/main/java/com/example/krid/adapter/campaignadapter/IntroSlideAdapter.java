@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.krid.R;
 
 import java.util.ArrayList;
@@ -43,17 +44,10 @@ public class IntroSlideAdapter extends RecyclerView.Adapter<IntroSlideAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final String imageUrl = listImage.get(position);
-
-//        holder.image.setBackgroundColor(Color.BLUE);
-
-//        holder.image.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view)
-//            {
-//
-//            }
-//        });
+        Glide.with(activity)
+                .load(listImage.get(position))
+                .fitCenter()
+                .into(holder.image);
     }
 
     @Override

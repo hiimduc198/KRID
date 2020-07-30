@@ -1,7 +1,7 @@
 package com.example.krid.adapter.campaignadapter;
 
 import android.app.Activity;
-import android.net.Uri;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,25 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.krid.MainActivity;
+import com.example.krid.ui.MainActivity;
 import com.example.krid.R;
 import com.example.krid.model.Campaign;
+import com.example.krid.model.CampaignStatus;
 import com.example.krid.model.City;
-import com.example.krid.ui.CampaignDetailFragment;
+import com.example.krid.ui.CampaignDetailGuestFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
@@ -38,10 +33,12 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView txtTitle;
         private TextView txtCity;
+        private TextView txtStatus;
         private ImageView imgCampaign;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtStatus = itemView.findViewById(R.id.txtStatus);
             txtTitle = itemView.findViewById(R.id.txtTitle);
             txtCity = itemView.findViewById(R.id.txtCity);
             imgCampaign = itemView.findViewById(R.id.imgCampaign);
@@ -67,6 +64,17 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
         final Campaign cam = campaignList.get(position);
         holder.txtTitle.setText(cam.getTitle());
 
+        FirebaseFirestore.getInstance().collection("CampaignStatus").document(cam.getCamStatusId()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                CampaignStatus status = task.getResult().toObject(CampaignStatus.class);
+                holder.txtStatus.setText(status.getName());
+                if(!cam.getCamStatusId().equals("ULAjPlDVOTh7IZgAPW5N")) {
+                    holder.txtStatus.setBackgroundColor(Color.GRAY);
+                }
+            }
+        });
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference collection = db.collection("City");
         collection.document(cam.getCityId()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -75,6 +83,7 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
                 if (task.isSuccessful()) {
                     City city = task.getResult().toObject(City.class);
                     holder.txtCity.setText(city.getName());
+                    cam.setLocation(city.getName());
                 }
             }
         });
@@ -87,7 +96,7 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
         holder.imgCampaign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)activity).navigateToFragmentWithArgs(new CampaignDetailFragment(), cam);
+                ((MainActivity)activity).navigateToFragmentWithArgs(new CampaignDetailGuestFragment(), cam);
             }
         });
     }
