@@ -13,7 +13,7 @@ public class Influencer implements Serializable {
     private String cityId;
     private String facebook;
     private int facebookFollowers;
-    private int numbOfInteractions;
+    private int numOfInteractions;
     private int gender;
     private String jobId;
     private String groupId;
@@ -23,7 +23,7 @@ public class Influencer implements Serializable {
     public Influencer() {
     }
 
-    public Influencer(String id, String name, String email, String phone, Date dob, String address, String cityId, String facebook, int facebookFollowers, int numbOfInteractions, int gender, String jobId, String groupId, String username, String password) {
+    public Influencer(String id, String name, String email, String phone, Date dob, String address, String cityId, String facebook, int facebookFollowers, int numOfInteractions, int gender, String jobId, String groupId, String username, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -33,7 +33,7 @@ public class Influencer implements Serializable {
         this.cityId = cityId;
         this.facebook = facebook;
         this.facebookFollowers = facebookFollowers;
-        this.numbOfInteractions = numbOfInteractions;
+        this.numOfInteractions = numOfInteractions;
         this.gender = gender;
         this.jobId = jobId;
         this.groupId = groupId;
@@ -77,8 +77,8 @@ public class Influencer implements Serializable {
         this.facebookFollowers = facebookFollowers;
     }
 
-    public void setNumbOfInteractions(int numbOfInteractions) {
-        this.numbOfInteractions = numbOfInteractions;
+    public void setNumOfInteractions(int numOfInteractions) {
+        this.numOfInteractions = numOfInteractions;
     }
 
     public void setGender(int gender) {
@@ -137,8 +137,8 @@ public class Influencer implements Serializable {
         return facebookFollowers;
     }
 
-    public int getNumbOfInteractions() {
-        return numbOfInteractions;
+    public int getNumOfInteractions() {
+        return numOfInteractions;
     }
 
     public int getGender() {

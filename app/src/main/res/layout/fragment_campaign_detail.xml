@@ -4,30 +4,26 @@
     android:layout_height="wrap_content"
     android:clipToPadding="false"
     android:paddingBottom="@dimen/dimen_30dp"
+    android:background="?android:windowBackground"
     android:fillViewport="true" >
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="230dp">
-
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/imgViewThumb"
+                android:id="@+id/imgCampaign"
                 android:src="@mipmap/bg_image_placeholder"
                 android:scaleType="centerCrop" />
-
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom">
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -35,75 +31,61 @@
                     android:layout_marginRight="@dimen/dimen_5dp"
                     android:layout_marginBottom="@dimen/dimen_5dp"
                     android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imgViewFeatured"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="@dimen/dimen_5dp"
-                        android:src="@mipmap/tag_featured" />
-
                     <ToggleButton
-                        android:id="@+id/toggleButtonFave"
+                        android:id="@+id/btnFave"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/select_toggle_fave"
                         android:textOff=""
                         android:textOn="" />
-
                 </LinearLayout>
-
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/black_color_opacity_66">
-
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dimen_5dp">
-
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginRight="@dimen/dimen_5dp">
-
                             <TextView
                                 android:id="@+id/txtTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
-                                android:text="iOS Developer Conference"
+                                android:text="Ten Chien Dich"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="@color/colorTitleText"
                                 android:textStyle="bold" />
-
                             <TextView
-                                android:id="@+id/tvSubtitle"
+                                android:id="@+id/txtLocation"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Ridge Trail, South San Francisco, CA, 94080"
+                                android:text="Location"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:textColor="@color/gray_color" />
                         </LinearLayout>
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/imgViewRoute"
                             android:src="@mipmap/button_directions" />
-
                     </LinearLayout>
                 </FrameLayout>
             </LinearLayout>
         </FrameLayout>
-        <View android:background="@drawable/line_accent" android:layout_width="match_parent" android:layout_height="3dp"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/line_accent" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -112,518 +94,285 @@
             android:background="@color/colorWhite">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/txtCompanyName"
+                android:layout_width="272dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Posted by John Doe"
-                android:id="@+id/tvPostedBy"
                 android:layout_gravity="center|left"
-                android:layout_weight="1"
                 android:layout_marginRight="@dimen/dimen_5dp"
+                android:layout_weight="1"
+                android:text="Rin Fashion"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textSize="@dimen/text_size_14sp" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="35dp"
-                android:id="@+id/tvDetailsJoined"
-                android:text="Joined"
-                android:textColor="@color/colorWhite"
-                android:gravity="center"
-                android:background="@color/colorAccent"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textSize="@dimen/text_size_16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            android:layout_marginRight="@dimen/dimen_5dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_margin="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_detail_day_left"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_gravity="center" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Friday, May 19 at 1:25 PM"
-                    android:id="@+id/tvDetailsDate"
-                    android:layout_gravity="center|left"
-                    android:textSize="@dimen/text_size_14sp" />
-
-            </LinearLayout>
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginRight="@dimen/dimen_5dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_margin="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_detail_pin_info"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Ridge Trail, South San Francisco, CA, 94080"
-                    android:layout_gravity="center|left"
-                    android:layout_weight="1"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:id="@+id/tvDetailsAddress"
-                    android:lines="@integer/num_new_lines_1"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/text_size_14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/show_map"
-                    android:id="@+id/tvDetailsShowMap"
-                    android:layout_gravity="center|right"
-                    android:textColor="@color/colorHyperLink"
-                    android:textSize="@dimen/text_size_12sp"
-                    android:singleLine="false" />
-
-            </LinearLayout>
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginRight="@dimen/dimen_5dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_margin="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_detail_day_left"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Ticket Available"
-                    android:layout_gravity="center|left"
-                    android:layout_weight="1"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:id="@+id/tvTicketAvailable"
-                    android:textSize="@dimen/text_size_14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/find_tickets"
-                    android:id="@+id/tvDetailsFindTickets"
-                    android:layout_gravity="center|right"
-                    android:textColor="@color/colorHyperLink"
-                    android:textSize="@dimen/text_size_12sp" />
-
-            </LinearLayout>
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            android:layout_marginRight="@dimen/dimen_5dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imgViewDetailsThumb1"
-                    android:src="@mipmap/bg_image_thumb_placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginLeft="@dimen/dimen_5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imgViewDetailsThumb2"
-                    android:src="@mipmap/bg_image_thumb_placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imgViewDetailsThumb3"
-                    android:src="@mipmap/bg_image_thumb_placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imgViewDetailsThumb4"
-                    android:src="@mipmap/bg_image_thumb_placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp" />
-            </LinearLayout>
-
-            <TextView
+            <Button
+                android:id="@+id/btnJoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="John, George, Jonathan and others are going."
-                android:layout_gravity="center|left"
-                android:textSize="@dimen/text_size_14sp"
-                android:layout_marginLeft="@dimen/dimen_5dp"
-                android:layout_marginRight="@dimen/dimen_5dp"
-                android:layout_marginBottom="@dimen/dimen_5dp"
-                android:id="@+id/tvDetailsThumbNames"
-                android:layout_marginTop="@dimen/dimen_5dp" />
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
+                android:layout_weight="1"
+                android:background="#4E64DA"
+                android:text="Apply the campaign"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginTop="@dimen/dimen_10dp"
-            android:layout_marginRight="@dimen/dimen_5dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <FrameLayout
+            <Button
+                android:id="@+id/btnApplyTime"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:text="@string/apply_time" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    android:layout_gravity="center|left"
-                    android:textSize="@dimen/text_size_14sp"
-                    android:layout_marginLeft="@dimen/dimen_5dp"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp"
-                    android:id="@+id/tvDetailsDesc" />
+            <Button
+                android:id="@+id/btnApprovalTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/approval_time" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    android:layout_gravity="center|left|top"
-                    android:textSize="@dimen/text_size_14sp"
-                    android:layout_marginLeft="@dimen/dimen_5dp"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp"
-                    android:id="@+id/tvDetailsDesc1Line"
-                    android:lines="1"
-                    android:ellipsize="end" />
-            </FrameLayout>
+            <Button
+                android:id="@+id/btnPostTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_post" />
 
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginRight="@dimen/dimen_5dp"
-            android:id="@+id/linearShowMoreDesc"
-            android:layout_marginBottom="@dimen/dimen_20dp">
+            <Button
+                android:id="@+id/btnReviewTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/review_time" />
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginTop="@dimen/dimen_5dp"
-                android:layout_marginRight="@dimen/dimen_5dp"
-                android:layout_marginBottom="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_gray"
-                    android:layout_gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/show_more"
-                    android:layout_gravity="center|left"
-                    android:layout_weight="1"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:textSize="@dimen/text_size_14sp"
-                    android:id="@+id/tvDetailsShowMoreDesc" />
-
-            </LinearLayout>
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginRight="@dimen/dimen_5dp"
-            android:id="@+id/linearDetailsComment1">
-
-            <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/dimen_5dp"
-                android:layout_marginBottom="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imgViewDetailsCommentThumb1"
-                    android:src="@mipmap/bg_image_thumb_placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_marginLeft="@dimen/dimen_5dp"
-                    android:layout_marginRight="@dimen/dimen_5dp" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Jonathan Moore"
-                            android:textSize="@dimen/text_size_14sp"
-                            android:layout_marginRight="@dimen/dimen_5dp"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:id="@+id/tvDetailsCommentName1" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="19 Thu 04:13 PM"
-                            android:layout_gravity="center|left"
-                            android:textSize="@dimen/text_size_12sp"
-                            android:layout_marginRight="@dimen/dimen_5dp"
-                            android:id="@+id/tvDetailsCommentDate1"
-                            android:gravity="left" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Definitely going this event."
-                        android:layout_gravity="center|left"
-                        android:textSize="@dimen/text_size_13sp"
-                        android:layout_marginRight="@dimen/dimen_5dp"
-                        android:id="@+id/tvDetailsCommentText1"
-                        android:gravity="left" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginRight="@dimen/dimen_5dp"
-            android:id="@+id/linearDetailsComment2">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/dimen_5dp"
-                android:layout_marginTop="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imgViewDetailsCommentThumb2"
-                    android:src="@mipmap/bg_image_thumb_placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:layout_marginLeft="@dimen/dimen_5dp" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="John Doe"
-                            android:textSize="@dimen/text_size_14sp"
-                            android:layout_marginRight="@dimen/dimen_5dp"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:id="@+id/tvDetailsCommentName2" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="17 Tue 04:14 PM"
-                            android:layout_gravity="center|left"
-                            android:textSize="@dimen/text_size_12sp"
-                            android:layout_marginRight="@dimen/dimen_5dp"
-                            android:id="@+id/tvDetailsCommentDate2"
-                            android:gravity="right" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="How to pay for the tickets?"
-                        android:layout_gravity="center|left"
-                        android:textSize="@dimen/text_size_13sp"
-                        android:layout_marginRight="@dimen/dimen_5dp"
-                        android:id="@+id/tvDetailsCommentText2"
-                        android:gravity="right" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_marginLeft="@dimen/dimen_5dp"
-            android:layout_marginRight="@dimen/dimen_5dp"
-            android:id="@+id/linearShowMoreComment"
-            android:layout_marginBottom="@dimen/dimen_20dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginTop="@dimen/dimen_5dp"
-                android:layout_marginRight="@dimen/dimen_5dp"
-                android:layout_marginBottom="@dimen/dimen_5dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_gray"
-                    android:layout_gravity="center" />
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="@string/textview_description_creatcampaign"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/view_user_posts"
-                    android:layout_gravity="center|left"
                     android:layout_weight="1"
-                    android:layout_marginRight="@dimen/dimen_5dp"
-                    android:textSize="@dimen/text_size_14sp" />
-
+                    android:text="Description" />
             </LinearLayout>
 
-            <View android:background="@drawable/line_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
 
+
+                <TextView
+                    android:id="@+id/reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Reward"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtReward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hastag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Hastag"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtHastag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hastag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Cash"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cash" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Influencer Age"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="age" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Influencer Gender"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="age" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Influence Quantity"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtNumOfInf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hastag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/todo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="To Do"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtTodo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hastag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/another"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Another Infomation"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAnother"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hastag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/web"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="Website"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hastag" />
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-
 
 </ScrollView>

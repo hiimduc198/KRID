@@ -9,7 +9,7 @@ public class Kol {
     private String cityId;
     private String facebook;
     private String facebookFollowers;
-    private String numbOfInteractions;
+    private String numOfInteractions;
     private int gender;
     private String jobId;
     private String groupId;
@@ -25,14 +25,14 @@ public class Kol {
         this.image = image;
     }
 
-    public Kol(String id, String name, Date dob, String cityId, String facebook, String facebookFollowers, String numbOfInteractions, int gender, String jobId, String groupId, String description, String image) {
+    public Kol(String id, String name, Date dob, String cityId, String facebook, String facebookFollowers, String numOfInteractions, int gender, String jobId, String groupId, String description, String image) {
         this.id = id;
         this.name = name;
         this.dob = dob;
         this.cityId = cityId;
         this.facebook = facebook;
         this.facebookFollowers = facebookFollowers;
-        this.numbOfInteractions = numbOfInteractions;
+        this.numOfInteractions = numOfInteractions;
         this.gender = gender;
         this.jobId = jobId;
         this.groupId = groupId;
@@ -64,8 +64,8 @@ public class Kol {
         this.facebookFollowers = facebookFollowers;
     }
 
-    public void setNumbOfInteractions(String numbOfInteractions) {
-        this.numbOfInteractions = numbOfInteractions;
+    public void setNumOfInteractions(String numOfInteractions) {
+        this.numOfInteractions = numOfInteractions;
     }
 
     public void setGender(int gender) {
@@ -108,8 +108,8 @@ public class Kol {
         return facebookFollowers;
     }
 
-    public String getNumbOfInteractions() {
-        return numbOfInteractions;
+    public String getNumOfInteractions() {
+        return numOfInteractions;
     }
 
     public int getGender() {

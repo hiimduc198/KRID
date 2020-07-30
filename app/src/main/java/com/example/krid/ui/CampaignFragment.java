@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.krid.MainActivity;
 import com.example.krid.R;
 import com.example.krid.adapter.campaignadapter.CampaignGuestAdapter;
@@ -23,13 +24,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.core.OrderBy;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.synnapps.carouselview.CarouselView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CampaignFragment extends Fragment {
     CarouselView carouselView;
@@ -39,7 +43,7 @@ public class CampaignFragment extends Fragment {
     private IntroSlideAdapter introSlideAdapter;
     private CampaignGuestAdapter campaignGuestAdapter;
 
-    private ArrayList<String> listImageUrl = new ArrayList<String>();
+    private ArrayList<String> listImage = new ArrayList<String>();
     private ArrayList<Campaign> listCampaign = new ArrayList<Campaign>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -62,16 +66,25 @@ public class CampaignFragment extends Fragment {
     }
 
     private void initIntroSlide() {
-        listImageUrl = new ArrayList<String>();
-        listImageUrl.add("URL1");
-        listImageUrl.add("URL2");
-        listImageUrl.add("URL3");
-        listImageUrl.add("URL4");
+        final ArrayList<String> listImageUrl = new ArrayList<>();
 
-        introSlideAdapter = new IntroSlideAdapter(getActivity(), listImageUrl);
+        listImage = new ArrayList<String>();
+        listImage.add("hotcampaign1.PNG");
+        listImage.add("hotcampaign2.PNG");
+        listImage.add("hotcampaign3.PNG");
+        listImage.add("hotcampaign4.PNG");
 
-        rcvIntroSlide.setAdapter(introSlideAdapter);
-        rcvIntroSlide.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, true));
+        for(String image:listImage) {
+            FirebaseStorage.getInstance().getReference().child("HotCampaign").child(image).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    listImageUrl.add(uri.toString());
+                    introSlideAdapter = new IntroSlideAdapter(getActivity(), listImageUrl);
+                    rcvIntroSlide.setAdapter(introSlideAdapter);
+                    rcvIntroSlide.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, true));
+                }
+            });
+        }
     }
 
     private void initRsvCampaign() {
@@ -79,7 +92,7 @@ public class CampaignFragment extends Fragment {
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
         final StorageReference imgsRef = storage.getReference().child("Campaign");
-        CampaignDao.collection.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        CampaignDao.collection.orderBy("applyTime", Query.Direction.DESCENDING).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
