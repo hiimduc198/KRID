@@ -28,8 +28,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CampaignDetailFragment extends Fragment {
     private ViewPager viewPager;
@@ -124,25 +127,34 @@ public class CampaignDetailFragment extends Fragment {
             btnJoin.setEnabled(false);
             btnJoin.setText("Can not join");
             btnJoin.setBackgroundColor(Color.GRAY);
-        }
-
-        btnJoin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(sessionInfId.equals("")) {
-                    ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
-                } else {
-                    InfluencerCampaign ic = new InfluencerCampaign();
-                    ic.setInfId(sessionInfId);
-                    ic.setCamId(cam.getId());
-                    ic.setStatus("D9CBKjLELUxlksOdPeCN");
-                    InfluencerCampaignDao.addNewInfluencerCampaign(ic);
-                    Toast.makeText(requireContext(), "Apply for join susscess", Toast.LENGTH_LONG).show();
-                    ((InfluenceActivity) requireActivity()).navigateToFragmentWithoutArgs(new HomeFragment());
+        } else {
+            FirebaseFirestore.getInstance().collection("InfluencerCampaign").whereEqualTo("infId", sessionInfId).whereEqualTo("camId", cam.getId()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    List<InfluencerCampaign> ics = task.getResult().toObjects(InfluencerCampaign.class);
+                    if(ics == null || ics.size()==0) {
+                        btnJoin.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if(sessionInfId.equals("")) {
+                                    ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
+                                } else {
+                                    InfluencerCampaign ic = new InfluencerCampaign();
+                                    ic.setInfId(sessionInfId);
+                                    ic.setCamId(cam.getId());
+                                    ic.setStatus("D9CBKjLELUxlksOdPeCN");
+                                    InfluencerCampaignDao.addNewInfluencerCampaign(ic);
+                                    Toast.makeText(requireContext(), "Apply for join susscess", Toast.LENGTH_LONG).show();
+                                    ((InfluenceActivity) requireActivity()).navigateToFragmentWithoutArgs(new HomeFragment());
+                                }
+                            }
+                        });
+                    } else {
+                        btnJoin.setVisibility(View.GONE);
+                    }
                 }
-            }
-        });
-
+            });
+        }
         return root;
     }
 

@@ -9,11 +9,11 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/inf_campaign"
+            android:id="@+id/inf_all_campaigns"
             android:icon="@drawable/ic_menu_campaing"
             android:title="@string/menu_campaign" />
         <item
-            android:id="@+id/inf_mycampaign"
+            android:id="@+id/inf_my_campaigns"
             android:icon="@drawable/ic_menu_mycampaign"
             android:title="@string/menu_mycampaign" />
         <item

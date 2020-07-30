@@ -15,8 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.krid.R;
-import com.example.krid.adapter.campaignadapter.AllCampaignAdapter;
-import com.example.krid.adapter.campaignadapter.IntroSlideAdapter;
+import com.example.krid.adapter.AllCampaignsAdapter;
+import com.example.krid.adapter.IntroSlideAdapter;
 import com.example.krid.database.CampaignDao;
 import com.example.krid.model.Campaign;
 import com.example.krid.util.Constants;
@@ -39,7 +39,7 @@ public class AllCampaignFragment extends Fragment {
     private RecyclerView rcvIntroSlide;
     private RecyclerView rcvCampaign;
     private IntroSlideAdapter introSlideAdapter;
-    private AllCampaignAdapter campaignGuestAdapter;
+    private AllCampaignsAdapter campaignGuestAdapter;
 
     private ArrayList<String> listImage = new ArrayList<String>();
     private ArrayList<Campaign> listCampaign = new ArrayList<Campaign>();
@@ -55,7 +55,7 @@ public class AllCampaignFragment extends Fragment {
             ((InfluenceActivity)getActivity()).getSupportActionBar().setTitle("Campaigns");
         }
 
-        View root = inflater.inflate(R.layout.fragment_campaign, container, false);
+        View root = inflater.inflate(R.layout.fragment_all_campaigns, container, false);
         rcvIntroSlide = root.findViewById(R.id.rcvSlideIntro);
         rcvCampaign = root.findViewById(R.id.rcvCampaign);
         initIntroSlide();
@@ -107,7 +107,7 @@ public class AllCampaignFragment extends Fragment {
                             public void onSuccess(Uri uri) {
                                 cam.setImage(uri.toString());
                                 listCampaign.add(cam);
-                                campaignGuestAdapter = new AllCampaignAdapter(getActivity(), listCampaign);
+                                campaignGuestAdapter = new AllCampaignsAdapter(getActivity(), listCampaign);
                                 rcvCampaign.setAdapter(campaignGuestAdapter);
                                 rcvCampaign.setLayoutManager(new GridLayoutManager(getActivity(), 2));
                             }

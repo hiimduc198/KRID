@@ -12,21 +12,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/inf_campaign"
+        android:id="@+id/inf_all_campaigns"
         android:name="com.example.krid.ui.AllCampaignFragment"
-        android:label="Create Campaign"
-        tools:layout="@layout/fragment_campaign" />
+        android:label="List All Campaigns"
+        tools:layout="@layout/fragment_all_campaigns" />
 
     <fragment
-        android:id="@+id/inf_mycampaign"
-        android:name="com.example.krid.ui.MyCampaignFragment"
-        android:label="Advertise Campaign"
-        tools:layout="@layout/fragment_mycampaigninf" />
+        android:id="@+id/inf_my_campaigns"
+        android:name="com.example.krid.ui.MyCampaignInfFragment"
+        android:label="Advertise Campaigns"
+        tools:layout="@layout/fragment_my_campaigns_inf" />
 
     <fragment
         android:id="@+id/inf_account"
         android:name="com.example.krid.ui.AccountDetailFragment"
-        android:label="Account Deatail"
+        android:label="Influence Account Detail"
         tools:layout="@layout/fragment_account_detail_adv" />
 
     <fragment

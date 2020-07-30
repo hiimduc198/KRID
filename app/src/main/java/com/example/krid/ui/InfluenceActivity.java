@@ -47,7 +47,7 @@ public class InfluenceActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.inf_home, R.id.inf_campaign, R.id.inf_mycampaign, R.id.inf_account, R.id.inf_logout)
+                R.id.inf_home, R.id.inf_all_campaigns, R.id.inf_my_campaigns, R.id.inf_account, R.id.inf_logout)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_inf);

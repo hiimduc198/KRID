@@ -1,4 +1,4 @@
-package com.example.krid.adapter.campaignadapter;
+package com.example.krid.adapter;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -29,7 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
-public class AllCampaignAdapter extends RecyclerView.Adapter<AllCampaignAdapter.ViewHolder> {
+public class AllCampaignsAdapter extends RecyclerView.Adapter<AllCampaignsAdapter.ViewHolder> {
     private Activity activity;
     private ArrayList<Campaign> campaignList;
 
@@ -48,7 +48,7 @@ public class AllCampaignAdapter extends RecyclerView.Adapter<AllCampaignAdapter.
         }
     }
 
-    public AllCampaignAdapter(Activity activity, ArrayList<Campaign> campaignList) {
+    public AllCampaignsAdapter(Activity activity, ArrayList<Campaign> campaignList) {
         this.activity = activity;
         this.campaignList = campaignList;
     }
@@ -57,7 +57,7 @@ public class AllCampaignAdapter extends RecyclerView.Adapter<AllCampaignAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(activity);
-        View campaignItemView = inflater.inflate(R.layout.item_campaign, parent, false);
+        View campaignItemView = inflater.inflate(R.layout.item_all_campaigns, parent, false);
         ViewHolder viewHolder = new ViewHolder(campaignItemView);
         return viewHolder;
     }
