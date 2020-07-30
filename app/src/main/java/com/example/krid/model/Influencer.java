@@ -14,7 +14,7 @@ public class Influencer implements Serializable {
     private String facebook;
     private int facebookFollowers;
     private int numOfInteractions;
-    private int gender;
+    private String gender;
     private String jobId;
     private String groupId;
     private String username;
@@ -23,7 +23,7 @@ public class Influencer implements Serializable {
     public Influencer() {
     }
 
-    public Influencer(String id, String name, String email, String phone, Date dob, String address, String cityId, String facebook, int facebookFollowers, int numOfInteractions, int gender, String jobId, String groupId, String username, String password) {
+    public Influencer(String id, String name, String email, String phone, Date dob, String address, String cityId, String facebook, int facebookFollowers, int numOfInteractions, String gender, String jobId, String groupId, String username, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -81,7 +81,7 @@ public class Influencer implements Serializable {
         this.numOfInteractions = numOfInteractions;
     }
 
-    public void setGender(int gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -141,7 +141,7 @@ public class Influencer implements Serializable {
         return numOfInteractions;
     }
 
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 

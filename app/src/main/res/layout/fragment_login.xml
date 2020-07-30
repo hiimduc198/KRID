@@ -28,58 +28,70 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/txtPassword"
-            android:layout_width="254dp"
-            android:layout_height="49dp"
+            android:id="@+id/inputUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="36dp"
             android:background="@drawable/backgroud_white_border_25_dp"
             android:ems="10"
+            android:hint="Username"
             android:inputType="textPassword"
             android:paddingLeft="12dp"
-            android:hint="Password"
+            android:password="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
         <EditText
-            android:id="@+id/txtEmail"
-            android:layout_width="254dp"
-            android:layout_height="49dp"
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
             android:background="@drawable/backgroud_white_border_25_dp"
             android:ems="10"
-            android:layout_marginTop="12dp"
-            android:hint="Username"
-            android:inputType="textPersonName"
+            android:hint="Password"
+            android:inputType="textPassword"
             android:paddingLeft="12dp"
+            android:password="true"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="194dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btn_login_Adv"
-                android:layout_width="138dp"
-                android:layout_height="47dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/button_login"
-                android:text="ADVERTISER LOGIN"
-                android:layout_marginHorizontal="@dimen/dimen_10dp"
-                android:textColor="#FFFFFF"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
             <Button
-                android:id="@+id/btn_login_inf"
+                android:id="@+id/btnLoginAdv"
                 android:layout_width="138dp"
                 android:layout_height="47dp"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
                 android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_login"
+                android:text="ADVERTISER LOGIN"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+            <Button
+                android:id="@+id/btnLoginInf"
+                android:layout_width="138dp"
+                android:layout_height="47dp"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
                 android:background="@drawable/button_login"
                 android:paddingHorizontal="5dp"
-                android:layout_marginHorizontal="@dimen/dp_10"
                 android:text="INFLUENCER LOGIN"
                 android:textColor="#FFFFFF"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
         </LinearLayout>
 
         <TextView
@@ -90,7 +102,7 @@
             android:text="---OR---" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnRegister"
             android:layout_width="134dp"
             android:layout_height="44dp"
             android:layout_marginTop="25dp"
@@ -99,19 +111,6 @@
             android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_login_Adv" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/text_underline"
-            android:linksClickable="false"
-            android:paddingBottom="15dp"
-            android:text="Forget password?"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
-
 
 
     </LinearLayout>

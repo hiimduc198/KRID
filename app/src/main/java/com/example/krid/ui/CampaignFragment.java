@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.example.krid.MainActivity;
 import com.example.krid.R;
 import com.example.krid.adapter.campaignadapter.CampaignGuestAdapter;
 import com.example.krid.adapter.campaignadapter.IntroSlideAdapter;
@@ -27,13 +25,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.core.OrderBy;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.synnapps.carouselview.CarouselView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CampaignFragment extends Fragment {
     CarouselView carouselView;

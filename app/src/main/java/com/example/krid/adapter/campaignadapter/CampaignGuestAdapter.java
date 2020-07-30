@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.krid.MainActivity;
+import com.example.krid.ui.MainActivity;
 import com.example.krid.R;
 import com.example.krid.model.Campaign;
 import com.example.krid.model.CampaignStatus;

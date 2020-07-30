@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.krid.MainActivity;
 import com.example.krid.R;
 import com.example.krid.database.AdvertiserDao;
+import com.example.krid.database.InfluencerDao;
 import com.example.krid.model.Advertiser;
 import com.example.krid.model.Influencer;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -58,7 +58,7 @@ public class Register1Fragment extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((com.example.krid.MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
+                ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
             }
         });
 
@@ -86,7 +86,7 @@ public class Register1Fragment extends Fragment {
                         } else {
                             adv.setUsername(username);
                             adv.setPassword(password);
-                            ((com.example.krid.MainActivity) requireActivity()).navigateToFragmentWithArgs(new Register2AdvFragment(), adv);
+                            ((MainActivity) requireActivity()).navigateToFragmentWithArgs(new Register2AdvFragment(), adv);
                         }
                     }
                 });
@@ -105,7 +105,7 @@ public class Register1Fragment extends Fragment {
         } else if(!username.matches("^[a-z0-9_-]{4,20}$")) {
             Toast.makeText(requireActivity(),"User name contains: alphabet characters, number, '_' or '-', with size: 4 to 20.", Toast.LENGTH_LONG).show();
         } else {
-            AdvertiserDao.collection.whereEqualTo("username", username).get()
+            InfluencerDao.collection.whereEqualTo("username", username).get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -114,7 +114,7 @@ public class Register1Fragment extends Fragment {
                             } else {
                                 inf.setUsername(username);
                                 inf.setPassword(password);
-                                ((com.example.krid.MainActivity) requireActivity()).navigateToFragmentWithArgs(new Register2InfFragment(), inf);
+                                ((MainActivity) requireActivity()).navigateToFragmentWithArgs(new Register2InfFragment(), inf);
                             }
                         }
                     });

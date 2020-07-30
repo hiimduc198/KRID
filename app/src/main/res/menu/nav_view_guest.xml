@@ -27,6 +27,4 @@
             android:icon="@drawable/ic_menu_register"
             android:title="@string/menu_register" />
     </group>
-
-
 </menu>

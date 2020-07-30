@@ -15,7 +15,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.krid.MainActivity;
 import com.example.krid.R;
 import com.example.krid.adapter.FieldSpinnerAdapter;
 import com.example.krid.database.AdvertiserDao;
@@ -132,7 +131,7 @@ public class Register2AdvFragment extends Fragment {
 
                 Toast.makeText(getContext(), "Register success.", Toast.LENGTH_LONG).show();
 
-                ((com.example.krid.MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new HomeFragment());
+                ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new HomeFragment());
             }
         });
 
