@@ -1,17 +1,12 @@
 package com.example.krid.database;
 
-import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.krid.model.Advertiser;
+import com.example.krid.model.Field;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -21,12 +16,12 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvertiserDao {
-    public static FirebaseFirestore db = FirebaseFirestore.getInstance();
-    public static CollectionReference colecttion = db.collection("Advertiser");
+public class FieldDao {
+    private static FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    public static void addNewAdvertiser(Advertiser adv) {
-        colecttion.add(adv)
+    public static void addNewField(Field adv) {
+        db.collection("Field")
+                .add(adv)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
@@ -41,15 +36,15 @@ public class AdvertiserDao {
                 });
     }
 
-    public static List<Advertiser> getAll() {
-        final List<Advertiser> list = new ArrayList<>();
+    public static List<Field> getAll() {
+        final List<Field> list = new ArrayList<>();
 
-        colecttion.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("Field").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        list.add(document.toObject(Advertiser.class));
+                        list.add(document.toObject(Field.class));
                     }
                 }
             }
