@@ -32,7 +32,7 @@ import com.synnapps.carouselview.CarouselView;
 import java.util.ArrayList;
 
 public class CampaignFragment extends Fragment {
-    CarouselView carouselView;
+
 
     private RecyclerView rcvIntroSlide;
     private RecyclerView rcvCampaign;

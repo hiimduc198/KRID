@@ -61,7 +61,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="preview"
-                    android:background="@color/white"
                     android:paddingHorizontal="@dimen/dp_10"
                     android:background="@color/white"
                     />

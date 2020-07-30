@@ -33,7 +33,7 @@ import com.synnapps.carouselview.CarouselView;
 import java.util.ArrayList;
 
 public class CampaignDetailFragment extends Fragment {
-    private ViewPager viewPager;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -41,7 +41,5 @@ public class CampaignDetailFragment extends Fragment {
         return root;
     }
 
-    private void initViewPager(){
-        viewPager = new ViewPager(getActivity().getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-    }
+
 }

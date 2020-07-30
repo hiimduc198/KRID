@@ -6,9 +6,6 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.krid.model.Advertiser;
-import com.example.krid.ui.HomeFragment;
-import com.example.krid.ui.LoginFragment;
-import com.example.krid.ui.Register2Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -44,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout_adv);
-        NavigationView navigationView = findViewById(R.id.nav_view_adv);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -67,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_adv);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
@@ -75,25 +72,24 @@ public class MainActivity extends AppCompatActivity {
     public void navigateToFragmentWithArgs(Fragment fragment, Serializable param) {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
-        Fragment fragment = new Register2Fragment();
         Bundle args = new Bundle();
         args.putSerializable("param", param);
         fragment.setArguments(args);
 
         getSupportFragmentManager().beginTransaction()
                 .addToBackStack("Tag")
-                .replace(R.id.nav_host_fragment_adv, fragment, "Tag")
+                .replace(R.id.nav_host_fragment, fragment, "Tag")
                 .commit();
 
         drawer.closeDrawer(GravityCompat.START);
     }
 
     public void navigateToFragmentWithoutArgs(Fragment fragment) {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout_adv);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         getSupportFragmentManager().beginTransaction()
                 .addToBackStack("Tag")
-                .replace(R.id.nav_host_fragment_adv, fragment, "Tag")
+                .replace(R.id.nav_host_fragment, fragment, "Tag")
                 .commit();
 
         drawer.closeDrawer(GravityCompat.START);
