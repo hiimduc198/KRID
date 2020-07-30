@@ -70,4 +70,5 @@
     <dimen name="dimen_100dp">100dp</dimen>
     <dimen name="dp_230">230dp</dimen>
     <dimen name="dp_130">130dp</dimen>
+    <dimen name="pd_6">6dp</dimen>
 </resources>

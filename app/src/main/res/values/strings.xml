@@ -11,6 +11,19 @@
         <item>Medicine</item>
         <item>Education</item>
     </string-array>
+    <string-array name="location">
+        <item>Hà Nội</item>
+        <item>Hồ Chí Minh</item>
+        <item>Hải Phòng</item>
+        <item>Vinh</item>
+        <item>Cần Thơ</item>
+    </string-array>
+    <string-array name="career">
+    <item>Student</item>
+    <item>office workers</item>
+    <item>Doctor</item>
+    <item>Other</item>
+</string-array>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -350,4 +363,5 @@
     <string name="text_kol_contactnow">Contact Now</string>
 	<string name="image_for_campaign">image for campaign</string>
     <string name="campaign_title">FABIMILK - Review sản phẩm sữa nhận sản phẩm sữa trị giá 500.000đ và tiền mặt 800.000đ</string>
+    <string name="influencer_reward">Tặng 1 lọ sản phẩm trị ho Úc trị giá 395k và 200k tiền mặt</string>
 </resources>

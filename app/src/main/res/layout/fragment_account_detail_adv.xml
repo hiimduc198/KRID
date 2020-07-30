@@ -1,23 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView1"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.CampaignFragment">
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
     <TextView
-        android:id="@+id/text_account_detail"
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Account Detail"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:text="ADVERTISER DETAIL"
+        android:textSize="24dp" />
+    <!--    android:weightSum="10"-->
+    <ScrollView android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_14"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Advertiser"
+                android:textSize="@dimen/text_size_18sp"
+                android:textColor="@color/black_color"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:paddingVertical="@dimen/dp_10"
+                android:background="@drawable/background_white_border_bottom"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/layout_product_and_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Username"
+                    />
+                <EditText
+                    android:id="@+id/ed_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="duc123"
+
+                    android:inputType="none"
+                    android:paddingLeft="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Full name"
+                    />
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="Pham Quoc Duc"
+
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Company name"
+                    />
+                <EditText
+                    android:id="@+id/inputCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="KRID"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp" />
+
+                <CheckBox
+                    android:id="@+id/checkIndividual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="Individual" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Website"
+                    />
+
+                <EditText
+                    android:id="@+id/inputWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Website.com"
+                    android:paddingLeft="20dp" />
+
+                <CheckBox
+                    android:id="@+id/checkWebsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="Doesn't have a website" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Email"
+                    />
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:text="Email@email.com"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Phone"
+                    />
+
+                <EditText
+                    android:id="@+id/inputPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/backgroud_white_border_4dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:text="3215646513"
+                    android:paddingLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Field"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinField"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:entries="@array/field_register"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="What campaign do you care of ? "
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <CheckBox
+                        android:id="@+id/cb_checkin_account_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dimen_100dp"
+                        android:text="Check-in" />
+                    <CheckBox
+                        android:id="@+id/cb_product_account_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="Product" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Your purpose when running an Influencer campaign? "
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <CheckBox
+                        android:id="@+id/cb_branding_viral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="68dp"
+                        android:text="Branding/viral" />
+
+                    <CheckBox
+                        android:id="@+id/cb_sale"
+                        android:layout_width="71dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="7dp"
+                        android:text="Sale" />
+
+                </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save information"
+                android:background="@drawable/background_red_border_4dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/white"
+                android:paddingHorizontal="@dimen/dp_10"
+                />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
