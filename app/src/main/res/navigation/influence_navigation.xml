@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/inf_home"
-        android:name="com.example.krid.ui.HomeInfFragment"
+        android:name="com.example.krid.ui.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home_inf" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/inf_campaign"
-        android:name="com.example.krid.ui.CampaignFragment"
+        android:name="com.example.krid.ui.AllCampaignFragment"
         android:label="Create Campaign"
         tools:layout="@layout/fragment_campaign" />
 
@@ -22,11 +22,13 @@
         android:name="com.example.krid.ui.MyCampaignFragment"
         android:label="Advertise Campaign"
         tools:layout="@layout/fragment_mycampaigninf" />
+
     <fragment
         android:id="@+id/inf_account"
         android:name="com.example.krid.ui.AccountDetailFragment"
         android:label="Account Deatail"
         tools:layout="@layout/fragment_account_detail_adv" />
+
     <fragment
         android:id="@+id/inf_logout"
         android:name="com.example.krid.ui.LogoutFragment"

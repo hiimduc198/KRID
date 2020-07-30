@@ -1,5 +1,6 @@
 package com.example.krid.ui;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -16,8 +18,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.bumptech.glide.Glide;
 import com.example.krid.R;
 import com.example.krid.adapter.ViewPager;
+import com.example.krid.database.InfluencerCampaignDao;
 import com.example.krid.model.Advertiser;
 import com.example.krid.model.Campaign;
+import com.example.krid.model.Influencer;
+import com.example.krid.model.InfluencerCampaign;
+import com.example.krid.util.Constants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -25,7 +31,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 
-public class CampaignDetailGuestFragment extends Fragment {
+public class CampaignDetailFragment extends Fragment {
     private ViewPager viewPager;
     private ImageView imgCampaign;
     private TextView txtTitle;
@@ -53,7 +59,14 @@ public class CampaignDetailGuestFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_campaign_detail, container, false);
 
-        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Campaign detail");
+        SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
+        final String sessionInfId = pref.getString(Constants.PREF_KEY_SESSION_ID, "");
+
+        if(sessionInfId.equals("")) {
+            ((MainActivity)getActivity()).getSupportActionBar().setTitle("Campaign detail");
+        } else {
+            ((InfluenceActivity)getActivity()).getSupportActionBar().setTitle("Campaign detail");
+        }
 
         imgCampaign = root.findViewById(R.id.imgCampaign);
         txtTitle = root.findViewById(R.id.txtTitle);
@@ -116,7 +129,17 @@ public class CampaignDetailGuestFragment extends Fragment {
         btnJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
+                if(sessionInfId.equals("")) {
+                    ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
+                } else {
+                    InfluencerCampaign ic = new InfluencerCampaign();
+                    ic.setInfId(sessionInfId);
+                    ic.setCamId(cam.getId());
+                    ic.setStatus("D9CBKjLELUxlksOdPeCN");
+                    InfluencerCampaignDao.addNewInfluencerCampaign(ic);
+                    Toast.makeText(requireContext(), "Apply for join susscess", Toast.LENGTH_LONG).show();
+                    ((InfluenceActivity) requireActivity()).navigateToFragmentWithoutArgs(new HomeFragment());
+                }
             }
         });
 

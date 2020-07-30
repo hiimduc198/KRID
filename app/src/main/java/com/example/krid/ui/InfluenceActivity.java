@@ -1,5 +1,6 @@
 package com.example.krid.ui;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.krid.R;
+import com.example.krid.util.Constants;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -45,13 +47,18 @@ public class InfluenceActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_booking, R.id.nav_campaign, R.id.nav_login, R.id.nav_register1, R.id.nav_register2_adv, R.id.nav_register2_inf, R.id.adv_create_campaign,
-                R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign_adv, R.id.adv_account)
+                R.id.inf_home, R.id.inf_campaign, R.id.inf_mycampaign, R.id.inf_account, R.id.inf_logout)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_inf);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        SharedPreferences pref = this.getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);                                SharedPreferences.Editor editor = pref.edit();
+        editor.putString(Constants.PREF_KEY_SESSION_ID, "p7PVxaBiiJ8Xuy0MhwUE");
+        editor.putString(Constants.PREF_KEY_SESSION_USERNAME, "kien");
+        editor.commit();
+
     }
 
     @Override
