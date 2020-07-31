@@ -53,12 +53,6 @@ public class InfluenceActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_inf);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        SharedPreferences pref = this.getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);                                SharedPreferences.Editor editor = pref.edit();
-        editor.putString(Constants.PREF_KEY_SESSION_ID, "p7PVxaBiiJ8Xuy0MhwUE");
-        editor.putString(Constants.PREF_KEY_SESSION_NAME, "kien");
-        editor.commit();
-
     }
 
     @Override
