@@ -56,7 +56,7 @@ public class InfluenceActivity extends AppCompatActivity {
 
         SharedPreferences pref = this.getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);                                SharedPreferences.Editor editor = pref.edit();
         editor.putString(Constants.PREF_KEY_SESSION_ID, "p7PVxaBiiJ8Xuy0MhwUE");
-        editor.putString(Constants.PREF_KEY_SESSION_USERNAME, "kien");
+        editor.putString(Constants.PREF_KEY_SESSION_NAME, "kien");
         editor.commit();
 
     }

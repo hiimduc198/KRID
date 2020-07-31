@@ -1,5 +1,7 @@
 package com.example.krid.database;
 
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 
 import com.example.krid.model.Influencer;
@@ -28,5 +30,14 @@ public class InfluencerDao {
                     public void onFailure(@NonNull Exception e) {
                     }
                 });
+    }
+
+    public static void editInfluencer(Influencer inf) {
+        collection.document(inf.getId()).set(inf)
+            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                }
+            });
     }
 }

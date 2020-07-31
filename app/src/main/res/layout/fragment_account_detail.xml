@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?android:windowBackground">
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -13,7 +14,6 @@
         android:gravity="center"
         android:text="INFLUENCER DETAIL"
         android:textSize="24dp" />
-    <!--    android:weightSum="10"-->
     <ScrollView android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +44,6 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
                 android:orientation="vertical"
-                android:visibility="gone"
                 tools:visibility="visible">
                 <TextView
                     android:layout_width="match_parent"
@@ -113,28 +112,11 @@
 
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="Website"
-                    />
-
-                <TextView
                     android:id="@+id/textView22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="Website" />
-
-                <EditText
-                    android:id="@+id/txtWebsite"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:background="@drawable/backgroud_white_border_4dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="20dp"
-                    android:text="Website.com" />
+                    android:text="Email" />
 
                 <EditText
                     android:id="@+id/txtEmail"
@@ -224,30 +206,33 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     >
+
                     <RadioButton
                         android:id="@+id/rdMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
+                        android:checked="true"
                         android:paddingHorizontal="@dimen/dp_10"
                         android:text="Male"
-                        />
+                        android:textColor="@color/gray_color" />
+
                     <RadioButton
                         android:id="@+id/rdFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
+                        android:checked="false"
                         android:paddingHorizontal="@dimen/dp_10"
                         android:text="Female"
-                        />
+                        android:textColor="@color/gray_color" />
+
                     <RadioButton
                         android:id="@+id/rdOther"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
+                        android:checked="false"
                         android:paddingHorizontal="@dimen/dp_10"
                         android:text="Other"
-                        />
+                        android:textColor="@color/gray_color" />
 
                 </RadioGroup>
 

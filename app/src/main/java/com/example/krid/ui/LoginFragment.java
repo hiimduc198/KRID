@@ -83,9 +83,10 @@ public class LoginFragment extends Fragment {
                     } else {
                         Influencer inf = task.getResult().toObjects(Influencer.class).get(0);
 
-                        SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);                                SharedPreferences.Editor editor = pref.edit();
+                        SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
+                        SharedPreferences.Editor editor = pref.edit();
                         editor.putString(Constants.PREF_KEY_SESSION_ID, inf.getId());
-                        editor.putString(Constants.PREF_KEY_SESSION_USERNAME, inf.getUsername());
+                        editor.putString(Constants.PREF_KEY_SESSION_NAME, inf.getName());
                         editor.commit();
 
                         Intent intent = new Intent(getContext(), InfluenceActivity.class);
@@ -114,9 +115,10 @@ public class LoginFragment extends Fragment {
                             } else {
                                 Advertiser inf = task.getResult().toObjects(Advertiser.class).get(0);
 
-                                SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);                                SharedPreferences.Editor editor = pref.edit();
+                                SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);
+                                SharedPreferences.Editor editor = pref.edit();
                                 editor.putString(Constants.PREF_KEY_SESSION_ID, inf.getId());
-                                editor.putString(Constants.PREF_KEY_SESSION_USERNAME, inf.getUsername());
+                                editor.putString(Constants.PREF_KEY_SESSION_NAME, inf.getName());
                                 editor.commit();
 
                                 Intent intent = new Intent(getContext(), AdvertiserActivity.class);

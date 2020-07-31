@@ -17,18 +17,6 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        SharedPreferences pref1 = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
-        String sessionInfId = pref1.getString(Constants.PREF_KEY_SESSION_ID, "");
-        SharedPreferences pref2 = getContext().getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);
-        String sessionAdvId = pref2.getString(Constants.PREF_KEY_SESSION_ID, "");
-
-        if(!sessionInfId.equals("")) {
-            ((InfluenceActivity)getActivity()).getSupportActionBar().setTitle("Home");
-        } else if(!sessionAdvId.equals("")) {
-            ((AdvertiserActivity)getActivity()).getSupportActionBar().setTitle("Home");
-        } else {
-            ((MainActivity) getActivity()).getSupportActionBar().setTitle("Home");
-        }
         return root;
     }
 
