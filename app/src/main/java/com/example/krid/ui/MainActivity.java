@@ -54,6 +54,25 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        SharedPreferences pref1 = getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
+        String sessionInfId = pref1.getString(Constants.PREF_KEY_SESSION_ID, "");
+        SharedPreferences pref2 = getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);
+        String sessionAdvId = pref2.getString(Constants.PREF_KEY_SESSION_ID, "");
+
+        if(!sessionInfId.equals("")) {
+            SharedPreferences.Editor editor = pref1.edit();
+            editor.remove(Constants.PREF_KEY_SESSION_ID);
+            editor.remove(Constants.PREF_KEY_SESSION_NAME);
+            editor.clear();
+            editor.commit();
+        } else {
+            SharedPreferences.Editor editor = pref2.edit();
+            editor.remove(Constants.PREF_KEY_SESSION_ID);
+            editor.remove(Constants.PREF_KEY_SESSION_NAME);
+            editor.clear();
+            editor.commit();
+        }
     }
 
     @Override
