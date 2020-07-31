@@ -22,13 +22,13 @@
         tools:layout="@layout/fragment_create_campaign" />
 
     <fragment
-        android:id="@+id/adv_mycampaign_adv"
+        android:id="@+id/adv_mycampaign"
         android:name="com.example.krid.ui.MyCampaignAdvFragment"
         android:label="Advertise Campaign"
         tools:layout="@layout/fragment_mycampaignadv" />
     <fragment
         android:id="@+id/adv_manage_delivery"
-        android:name="com.example.krid.ui.ManageFragment"
+        android:name="com.example.krid.ui.ManageDeliveryFragment"
         android:label="Manage Delivery"
         tools:layout="@layout/fragment_manage_delivery" />
     <fragment

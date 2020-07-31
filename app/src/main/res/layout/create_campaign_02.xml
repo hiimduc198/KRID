@@ -156,6 +156,7 @@
                 android:layout_marginLeft="@dimen/dp_10"
                 android:background="@drawable/background_red_border_4dp"
                 android:fontFamily="casual"
+                android:textColor="@color/white"
                 android:text="@string/btn_upload_img_createcampaign" />
 
         </LinearLayout>
@@ -169,6 +170,7 @@
             android:background="@drawable/background_red_border_4dp"
             android:fontFamily="casual"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="@string/btn_next" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,9 +33,9 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="10dp"
                 android:text="My campaign"
+                app:layout_constraintStart_toStartOf="parent"
                 android:textColor="#B9256A"
-                app:layout_constraintStart_toStartOf="parent" />
-
+                />
             <TextView
                 android:id="@+id/txt_campaign_title"
                 android:layout_width="match_parent"
@@ -43,7 +43,6 @@
                 android:text="Chiến dịch sản phẩm mẫu Tặng 01 hộp Ngũ cốc lợi sữa trị giá 365.000đvà 400.000đ tiền mặt-14038-190823"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_my_campaign" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,9 +60,10 @@
                     android:id="@+id/btn_preview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
+                    android:text="preview"
                     android:paddingHorizontal="@dimen/dp_10"
-                    android:text="approval" />
+                    android:background="@color/white"
+                    />
             </LinearLayout>
 
             <TextView
@@ -288,73 +288,72 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_14"
                     android:background="@drawable/backgroud_white_border_4dp" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_14"
                     android:layout_marginTop="@dimen/dp_20"
                     android:text="Send product to review" />
-
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="14dp" />
-
+                    android:layout_margin="14dp"
+                    />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:paddingHorizontal="@dimen/dp_20"
+                    android:orientation="horizontal"
+                    >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Image"
                         android:paddingVertical="@dimen/dp_10"
-                        android:text="Image"
-                        android:textColor="@color/gray_color" />
-
+                       android:paddingHorizontal="@dimen/dp_20"
+                       android:textColor="@color/gray_color"
+                       android:layout_gravity="left"
+                       />
                     <TextView
                         android:id="@+id/tv_delete_all"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:paddingHorizontal="@dimen/dp_20"
-                        android:paddingVertical="@dimen/dp_10"
+                        android:textColor="#FF0000"
                         android:text="Delete all Image"
-                        android:textColor="#FF0000" />
+                        android:paddingVertical="@dimen/dp_10"
+                        android:paddingHorizontal="@dimen/dp_20"
+                        android:gravity="right"
+                        />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_gravity="left"
+                    android:orientation="horizontal"
                     android:background="@drawable/backgroud_white_border_4dp"
-                    android:orientation="horizontal">
-
+                    android:layout_gravity="left">
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_gravity="center_vertical"
                         android:paddingVertical="@dimen/dp_5"
-                        android:src="@drawable/img_campaign_1" />
-
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/img_campaign_1"
+                        />
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="@dimen/dp_10"
                         android:background="@drawable/backgroud_white_border_4dp"
+                        android:text="Add Image"
                         android:paddingVertical="@dimen/dp_10"
-                        android:text="Add Image" />
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_gravity="center_vertical"
+                        />
 
                 </LinearLayout>
 
 
-            </LinearLayout>
 
+
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/campaign_detail_description_title"
                 android:layout_width="match_parent"
@@ -378,7 +377,6 @@
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/sp_16" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/campaign_detail_description"
                 android:layout_width="match_parent"
@@ -387,31 +385,28 @@
                 android:orientation="vertical"
                 android:visibility="gone"
                 tools:visibility="visible">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/dp_10"
                     android:text="Influencer Reward"
+                    android:padding="@dimen/dp_10"
 
                     />
-
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_140"
                     android:background="@drawable/backgroud_white_border_4dp"
-                    android:gravity="top"
                     android:text="@string/influencer_reward"
-                    android:textColor="@color/gray_color" />
-
+                    android:gravity="top"
+                    android:textColor="@color/gray_color"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/dp_10"
                     android:text="Cash Reward"
+                    android:padding="@dimen/dp_10"
 
                     />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -419,31 +414,30 @@
                     android:padding="@dimen/dp_10"
 
                     >
-
                     <EditText
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/backgroud_white_border_4dp"
-                        android:padding="@dimen/dp_10" />
-
+                        android:padding="@dimen/dp_10"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="@dimen/dp_5"
+                        android:textSize="@dimen/text_size_20sp"
                         android:text="VND"
+                        android:paddingHorizontal="@dimen/dp_5"
                         android:textColor="@color/black_color"
-                        android:textSize="@dimen/text_size_20sp" />
+                        />
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/dp_10"
                     android:text="Best Influencer Reward"
+                    android:padding="@dimen/dp_10"
 
                     />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -451,23 +445,22 @@
                     android:padding="@dimen/dp_10"
 
                     >
-
                     <EditText
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/backgroud_white_border_4dp"
-                        android:padding="@dimen/dp_10" />
-
+                        android:padding="@dimen/dp_10"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="@dimen/dp_5"
+                        android:textSize="@dimen/text_size_20sp"
                         android:text="VND"
+                        android:paddingHorizontal="@dimen/dp_5"
                         android:textColor="@color/black_color"
-                        android:textSize="@dimen/text_size_20sp" />
+                        />
 
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -479,9 +472,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_20"
                         android:layout_marginRight="@dimen/dp_20"
+                        android:text="Cancel"
                         android:background="@drawable/backgroud_white_border_4dp"
                         android:padding="@dimen/dp_10"
-                        android:text="Cancel"
                         android:textSize="@dimen/sp_16" />
 
                     <Button
