@@ -46,6 +46,8 @@ public class AllCampaignFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        ((MainActivity)requireActivity()).getSupportActionBar().setTitle("KOLs");
+
         SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
         String sessionInfId = pref.getString(Constants.PREF_KEY_SESSION_ID, "");
 

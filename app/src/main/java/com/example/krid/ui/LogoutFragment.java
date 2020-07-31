@@ -23,7 +23,6 @@ public class LogoutFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_logout, container, false);
-        final TextView textView = root.findViewById(R.id.text_logout);
 
         SharedPreferences pref1 = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
         String sessionInfId = pref1.getString(Constants.PREF_KEY_SESSION_ID, "");
