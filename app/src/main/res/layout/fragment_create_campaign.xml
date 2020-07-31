@@ -77,14 +77,14 @@
 
             <EditText
                 android:id="@+id/txt_title"
-                android:layout_width="240dp"
+                android:layout_width="202dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
-                android:hint="@string/title_campaign"
                 android:fontFamily="casual"
+                android:hint="@string/title_campaign"
                 android:inputType="textPersonName"
                 android:padding="@dimen/dimen_10dp" />
         </LinearLayout>
@@ -97,7 +97,7 @@
 
             <TextView
                 android:id="@+id/textview_number_inf"
-                android:layout_width="@dimen/dp_130"
+                android:layout_width="179dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -114,7 +114,7 @@
                 android:padding="@dimen/dimen_10dp"
                 android:background="@drawable/backgroud_white_border_4dp"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -135,7 +135,7 @@
 
             <EditText
                 android:id="@+id/txt_date_post"
-                android:layout_width="wrap_content"
+                android:layout_width="166dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -163,7 +163,7 @@
 
             <EditText
                 android:id="@+id/txt_apply_time"
-                android:layout_width="229dp"
+                android:layout_width="185dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
@@ -190,7 +190,7 @@
 
             <EditText
                 android:id="@+id/txt_review_time"
-                android:layout_width="220dp"
+                android:layout_width="173dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="2"
@@ -218,7 +218,7 @@
 
             <EditText
                 android:id="@+id/txt_approval_time"
-                android:layout_width="223dp"
+                android:layout_width="180dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"

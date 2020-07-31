@@ -142,7 +142,7 @@
                         android:text="@string/text_hastag" />
 
                     <EditText
-                        android:id="@+id/txt_another_info"
+                        android:id="@+id/txt_hashtag"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -174,7 +174,7 @@
                         android:layout_marginTop="@dimen/activity_vertical_margin"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="date" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -194,7 +194,7 @@
                         android:text="@string/text_another_info" />
 
                     <EditText
-                        android:id="@+id/txt_apply_time"
+                        android:id="@+id/ed_anotherinfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -219,13 +219,13 @@
                         android:text="@string/text_website" />
 
                     <EditText
-                        android:id="@+id/txt_review_time"
+                        android:id="@+id/txt_website"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/activity_vertical_margin"
                         android:layout_weight="2"
                         android:ems="10"
-                        android:inputType="date" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -284,7 +284,8 @@
                         android:text="@string/text_gender" />
 
 
-                    <RadioGroup
+                    <LinearLayout
+                        android:id="@+id/rdg_gender"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -309,7 +310,7 @@
                             android:text="@string/text_male"
                             />
 
-                    </RadioGroup>
+                    </LinearLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -327,34 +328,34 @@
                         android:gravity="center"
                         android:text="@string/text_influencer_group" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/checkBox6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/cbx_hotteen" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/checkBox5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/cbx_hotmom" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/checkBox4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/text_hotdadd" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/checkBox3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -362,21 +363,21 @@
                             android:layout_weight="1"
                             android:text="@string/text_male" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/checkBox9"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/text_female" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/checkBox8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/text_teen" />
 
-                    </RadioGroup>
+                    </LinearLayout>
 
                 </LinearLayout>
 
