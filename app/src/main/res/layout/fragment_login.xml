@@ -68,8 +68,8 @@
 
             <Button
                 android:id="@+id/btnLoginAdv"
-                android:layout_width="138dp"
-                android:layout_height="47dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dimen_10dp"
                 android:layout_marginTop="12dp"
                 android:layout_weight="1"
@@ -81,8 +81,8 @@
 
             <Button
                 android:id="@+id/btnLoginInf"
-                android:layout_width="138dp"
-                android:layout_height="47dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dp_10"
                 android:layout_marginTop="12dp"
                 android:layout_weight="1"

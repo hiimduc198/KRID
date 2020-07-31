@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/title_create_campaign"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:fontFamily="casual"
             android:gravity="center"
             android:text="@string/create_campaign"
@@ -98,7 +98,7 @@
             <TextView
                 android:id="@+id/textview_number_inf"
                 android:layout_width="@dimen/dp_130"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:fontFamily="casual"
@@ -126,7 +126,7 @@
             <TextView
                 android:id="@+id/textview_post_date"
                 android:layout_width="39dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="3"
                 android:fontFamily="casual"
@@ -136,7 +136,7 @@
             <EditText
                 android:id="@+id/txt_date_post"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:background="@drawable/backgroud_white_border_4dp"
@@ -154,7 +154,7 @@
             <TextView
                 android:id="@+id/texview_apply_time"
                 android:layout_width="0.6in"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="3"
                 android:fontFamily="casual"
@@ -164,7 +164,7 @@
             <EditText
                 android:id="@+id/txt_apply_time"
                 android:layout_width="229dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:background="@drawable/backgroud_white_border_4dp"
@@ -181,7 +181,7 @@
             <TextView
                 android:id="@+id/textview_review_time"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="4"
                 android:fontFamily="casual"
@@ -191,7 +191,7 @@
             <EditText
                 android:id="@+id/txt_review_time"
                 android:layout_width="220dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="2"
                 android:background="@drawable/backgroud_white_border_4dp"
@@ -209,7 +209,7 @@
             <TextView
                 android:id="@+id/textview_approval_time"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="3"
                 android:fontFamily="casual"
@@ -219,7 +219,7 @@
             <EditText
                 android:id="@+id/txt_approval_time"
                 android:layout_width="223dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:background="@drawable/backgroud_white_border_4dp"
@@ -235,6 +235,7 @@
             android:layout_gravity="right"
             android:backgroundTint="@android:color/holo_green_dark"
             android:fontFamily="casual"
+            android:textColor="@color/white"
             android:gravity="center"
             android:text="@string/btn_next" />
 

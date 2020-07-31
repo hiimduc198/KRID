@@ -314,7 +314,7 @@
     <string name="btn_next">Next</string>
     <string name="textview_title_create_02">Add Information For Campaign</string>
     <string name="textview_description_creatcampaign">Description</string>
-    <string name="textview_sendgoods_createcampaign">Send Stuff</string>
+    <string name="textview_sendgoods_createcampaign">Send Product</string>
     <string name="checkbox_send">Send</string>
     <string name="textview_importimg_creeatcampaign">Import Image</string>
     <string name="btn_upload_img_createcampaign">Upload</string>

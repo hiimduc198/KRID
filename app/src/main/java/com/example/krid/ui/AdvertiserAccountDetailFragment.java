@@ -76,6 +76,7 @@ public class AdvertiserAccountDetailFragment extends Fragment {
         pass=root.findViewById(R.id.ed_advertiser_password);
         newPasscf =root.findViewById(R.id.ed_advertiser_new_password_cf);
 
+        db=FirebaseFirestore.getInstance();
         displayAccount(id);
 
         btnSaveInfo.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +144,7 @@ public class AdvertiserAccountDetailFragment extends Fragment {
         return root;
     }
 
-    private static void displayAccount(String id){
+    private  void displayAccount(String id){
         advertiser = new Advertiser();
         AdvertiserDao.collection.whereEqualTo("id",id).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
@@ -155,7 +156,30 @@ public class AdvertiserAccountDetailFragment extends Fragment {
                 name.setText(advertiser.getName());
                 phone.setText(advertiser.getPhone());
                 website.setText(advertiser.getWebsite());
+                final List<Field> list = new ArrayList<>();
 
+                db.collection("Field").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                list.add(document.toObject(Field.class));
+                            }
+                        }
+                        FieldSpinnerAdapter adapter = new FieldSpinnerAdapter(getContext(), android.R.layout.simple_spinner_item, list);
+                        spnField.setAdapter(adapter);
+                        spnField.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                                advertiser.setFieldId(((Field) spnField.getSelectedItem()).getId());
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parentView) {
+                            }
+                        });
+                    }
+                });
             }
         });
     }

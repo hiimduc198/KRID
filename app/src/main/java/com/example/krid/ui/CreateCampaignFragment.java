@@ -53,26 +53,14 @@ public class CreateCampaignFragment extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CampaignDao.collection.whereEqualTo("","5JORX9EDu8UjUnW08V2w")
-                        .get()
-                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                if(!task.getResult().isEmpty()) {
-                                    Toast.makeText(requireActivity(),"This username is already taken. Please enter another username", Toast.LENGTH_LONG).show();
-                                } else {
-                                    campaign = new Campaign();
-                                    campaign.setTitle(title.getText().toString().trim());
-                                    campaign.setNumOfInf(infNum.getText().toString());
-                                    campaign.setPostTime(parseDate(datePost.getText().toString()));
-                                    campaign.setApplyTime(parseDate(aplTime.getText().toString()));
-                                    campaign.setReviewTime(parseDate(rvTime.getText().toString()));
-                                    ((AdvertiserActivity) requireActivity()).navigateToFragmentWithArgs(new CreateCampaignFragment2(), campaign);
-                                }
-                            }
-                        });
 
-
+                campaign = new Campaign();
+                campaign.setTitle(title.getText().toString().trim());
+                campaign.setNumOfInf(infNum.getText().toString());
+                campaign.setPostTime(parseDate(datePost.getText().toString()));
+                campaign.setApplyTime(parseDate(aplTime.getText().toString()));
+                campaign.setReviewTime(parseDate(rvTime.getText().toString()));
+                ((AdvertiserActivity) requireActivity()).navigateToFragmentWithArgs(new CreateCampaignFragment2(), campaign);
             }
         });
 

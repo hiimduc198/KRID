@@ -27,7 +27,7 @@
             android:gravity="center"
             android:inputType="textPersonName"
             android:text="@string/text_campaign_name"
-            android:textSize="18sp" />
+            android:textSize="10sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,22 +36,24 @@
 
             <Button
                 android:id="@+id/btnCamStatus"
-                android:layout_width="111dp"
+                android:layout_width="106dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#87EA73"
                 android:clickable="@bool/btn_unclick"
                 android:fontFamily="casual"
                 android:text="@string/text_btn_period"
+                android:textSize="10sp"
                 android:textStyle="italic" />
 
             <Button
                 android:id="@+id/btnInfStatus"
-                android:layout_width="match_parent"
+                android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#DA7373"
                 android:clickable="@bool/btn_unclick"
                 android:fontFamily="casual"
                 android:text="@string/text_btn_status"
+                android:textSize="10sp"
                 android:textStyle="italic" />
         </LinearLayout>
     </LinearLayout>

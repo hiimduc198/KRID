@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
 
     <LinearLayout
@@ -25,152 +26,380 @@
             android:text="@string/textview_title_create_02"
             android:textSize="24sp" />
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="144dp"
-            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_50dp"
-                android:layout_weight="1"
-                android:fontFamily="casual"
-                android:text="@string/textview_description_creatcampaign" />
 
-            <EditText
-                android:id="@+id/txt_description_creatcampaign"
-                android:layout_width="wrap_content"
-                android:layout_height="142dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:fontFamily="casual"
 
-                android:padding="@dimen/dp_8"
-                android:background="@drawable/backgroud_white_border_4dp"
-                android:gravity="start|top"
-                android:hint="@string/textview_description_creatcampaign"
 
-                android:inputType="textMultiLine" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="casual"
-                android:gravity="left"
-                android:text="@string/textview_sendgoods_createcampaign" />
-
-            <CheckBox
-                android:id="@+id/cbx_sendgoods_createcampaign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:fontFamily="casual"
-                android:text="@string/checkbox_send" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/chekcin"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="casual"
-                android:gravity="left"
-                android:text="@string/text_checkin_creatcampaign" />
-
-            <CheckBox
-                android:id="@+id/cbx_checkin_createcampaign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:fontFamily="casual"
-                android:text="@string/checkbox_send_location" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/img_createcampaign"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_weight="4"
-                app:srcCompat="@mipmap/bg_image_placeholder" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="255dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+                    android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="casual"
-            android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_50dp"
+                        android:layout_weight="1"
+                        android:fontFamily="casual"
+                        android:text="@string/textview_description_creatcampaign" />
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="58dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:fontFamily="casual"
-                android:gravity="left"
-                android:text="@string/textview_importimg_creeatcampaign" />
+                    <EditText
+                        android:id="@+id/txt_description_creatcampaign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="142dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:fontFamily="casual"
 
-            <EditText
-                android:id="@+id/editText12"
-                android:layout_width="129dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:fontFamily="casual"
-                android:background="@drawable/backgroud_white_border_4dp"
-                android:padding="10dp"
-                android:hint="@android:string/copyUrl"
-                android:inputType="textPersonName" />
+                        android:padding="@dimen/dp_8"
+                        android:background="@drawable/backgroud_white_border_4dp"
+                        android:gravity="start|top"
+                        android:hint="@string/textview_description_creatcampaign"
 
-            <Button
-                android:id="@+id/btn_upload_img_createcampaign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:background="@drawable/background_red_border_4dp"
-                android:fontFamily="casual"
-                android:textColor="@color/white"
-                android:text="@string/btn_upload_img_createcampaign" />
+                        android:inputType="textMultiLine" />
 
-        </LinearLayout>
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_next_creatcampaign02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dimen_50dp"
-            android:background="@drawable/background_red_border_4dp"
-            android:fontFamily="casual"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="@string/btn_next" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_size_12sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_reward"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="casual"
+                        android:gravity="center|clip_vertical"
+                        android:text="@string/textview_reward" />
+
+                    <EditText
+                        android:id="@+id/edReward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_title_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="62dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_cash" />
+
+                    <EditText
+                        android:id="@+id/txt_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_numinf_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_number_inf"
+                        android:layout_width="106dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_hastag" />
+
+                    <EditText
+                        android:id="@+id/txt_another_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_postdate_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_post_date"
+                        android:layout_width="39dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_work_to_do" />
+
+                    <EditText
+                        android:id="@+id/txt_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="date" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/texview_apply_time"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_another_info" />
+
+                    <EditText
+                        android:id="@+id/txt_apply_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_review_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="4"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_website" />
+
+                    <EditText
+                        android:id="@+id/txt_review_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="2"
+                        android:ems="10"
+                        android:inputType="date" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_conditionforapply" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_approval_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_age" />
+
+                    <EditText
+                        android:id="@+id/txt_age_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ems="10"
+                        android:inputType="numberSigned" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_inf_gender"
+                        android:layout_width="233dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_gender" />
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <RadioButton android:id="@+id/checkBox_allsex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/border_store_list"
+                            android:layout_weight="1"
+                            android:text="@string/text_all" />
+                        <RadioButton
+                            android:id="@+id/checkBox_female"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/text_female" />
+                        <RadioButton
+                            android:id="@+id/checkBox_male"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/text_male"
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="233dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="@string/text_influencer_group" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/checkBox6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cbx_hotteen" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cbx_hotmom" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/text_hotdadd" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/border_store_list"
+                            android:layout_weight="1"
+                            android:text="@string/text_male" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/text_female" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/text_teen" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_createcampaign_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/dimen_50dp"
+                    android:backgroundTint="@android:color/holo_purple"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="@string/btn_done" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
