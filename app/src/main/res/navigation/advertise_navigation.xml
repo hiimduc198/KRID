@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/adv_home"
-        android:name="com.example.krid.ui.HomeAdvFragment"
+        android:name="com.example.krid.ui.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home_adv"/>
+        tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/adv_booking"
         android:name="com.example.krid.ui.BookingAdvFragment"

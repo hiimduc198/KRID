@@ -1,5 +1,6 @@
 package com.example.krid.ui;
 
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,10 +15,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.krid.R;
-import com.example.krid.adapter.campaignadapter.CampaignGuestAdapter;
-import com.example.krid.adapter.campaignadapter.IntroSlideAdapter;
+import com.example.krid.adapter.AllCampaignsAdapter;
+import com.example.krid.adapter.IntroSlideAdapter;
 import com.example.krid.database.CampaignDao;
 import com.example.krid.model.Campaign;
+import com.example.krid.util.Constants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,23 +33,29 @@ import com.synnapps.carouselview.CarouselView;
 
 import java.util.ArrayList;
 
-public class CampaignFragment extends Fragment {
-
+public class AllCampaignFragment extends Fragment {
+    CarouselView carouselView;
 
     private RecyclerView rcvIntroSlide;
     private RecyclerView rcvCampaign;
     private IntroSlideAdapter introSlideAdapter;
-    private CampaignGuestAdapter campaignGuestAdapter;
+    private AllCampaignsAdapter campaignGuestAdapter;
 
     private ArrayList<String> listImage = new ArrayList<String>();
     private ArrayList<Campaign> listCampaign = new ArrayList<Campaign>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
+        String sessionInfId = pref.getString(Constants.PREF_KEY_SESSION_ID, "");
 
-        ((AdvertiserActivity)getActivity()).getSupportActionBar().setTitle("Campaigns.");
+        if(sessionInfId.equals("")) {
+            ((MainActivity)getActivity()).getSupportActionBar().setTitle("Campaigns");
+        } else {
+            ((InfluenceActivity)getActivity()).getSupportActionBar().setTitle("Campaigns");
+        }
 
-        View root = inflater.inflate(R.layout.fragment_campaign, container, false);
+        View root = inflater.inflate(R.layout.fragment_all_campaigns, container, false);
         rcvIntroSlide = root.findViewById(R.id.rcvSlideIntro);
         rcvCampaign = root.findViewById(R.id.rcvCampaign);
         initIntroSlide();
@@ -99,7 +107,7 @@ public class CampaignFragment extends Fragment {
                             public void onSuccess(Uri uri) {
                                 cam.setImage(uri.toString());
                                 listCampaign.add(cam);
-                                campaignGuestAdapter = new CampaignGuestAdapter(getActivity(), listCampaign);
+                                campaignGuestAdapter = new AllCampaignsAdapter(getActivity(), listCampaign);
                                 rcvCampaign.setAdapter(campaignGuestAdapter);
                                 rcvCampaign.setLayoutManager(new GridLayoutManager(getActivity(), 2));
                             }

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?android:windowBackground">
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -13,7 +14,6 @@
         android:gravity="center"
         android:text="INFLUENCER DETAIL"
         android:textSize="24dp" />
-    <!--    android:weightSum="10"-->
     <ScrollView android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +44,6 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
                 android:orientation="vertical"
-                android:visibility="gone"
                 tools:visibility="visible">
                 <TextView
                     android:layout_width="match_parent"
@@ -52,32 +51,36 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:text="Username"
                     />
+
                 <EditText
-                    android:id="@+id/ed_username"
+                    android:id="@+id/txtUserName"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:ems="10"
-                    android:text="duc123"
-
                     android:inputType="none"
-                    android:paddingLeft="20dp"/>
+
+                    android:paddingLeft="20dp"
+                    android:text="duc123" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
                     android:text="Full name"
                     />
+
                 <EditText
-                    android:id="@+id/inputName"
+                    android:id="@+id/txtName"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:ems="10"
-                    android:text="Pham Quoc Duc"
-
                     android:inputType="textPersonName"
-                    android:paddingLeft="20dp" />
+
+                    android:paddingLeft="20dp"
+                    android:text="Pham Quoc Duc" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -85,7 +88,7 @@
                     android:text="Address"
                     />
                 <EditText
-                    android:id="@+id/ed_address"
+                    android:id="@+id/txtAddress"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
@@ -101,7 +104,7 @@
                 />
 
                 <Spinner
-                    android:id="@+id/spinLocation"
+                    android:id="@+id/spnLocation"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
                     android:entries="@array/location"
@@ -109,39 +112,23 @@
 
 
                 <TextView
+                    android:id="@+id/textView22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="Website"
-                    />
+                    android:text="Email" />
 
                 <EditText
-                    android:id="@+id/inputWebsite"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:background="@drawable/backgroud_white_border_4dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Website.com"
-                    android:paddingLeft="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="Email"
-                    />
-
-                <EditText
-                    android:id="@+id/inputName"
+                    android:id="@+id/txtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:layout_marginTop="2dp"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:ems="10"
-                    android:text="Email@email.com"
                     android:inputType="textEmailAddress"
-                    android:paddingLeft="20dp" />
+                    android:paddingLeft="20dp"
+                    android:text="Email@email.com" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -149,16 +136,16 @@
                     android:text="Phone"
                     />
 
+
                 <EditText
-                    android:id="@+id/inputPhone"
+                    android:id="@+id/txtPhone"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
                     android:ems="10"
                     android:inputType="phone"
-                    android:text="3215646513"
-                    android:paddingLeft="20dp" />
-
+                    android:paddingLeft="20dp"
+                    android:text="3215646513" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -168,7 +155,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/ed_facebook"
+                    android:id="@+id/txtFacebook"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
@@ -183,7 +170,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/ed_number_followers"
+                    android:id="@+id/txtFacebookFollower"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
@@ -191,21 +178,7 @@
                     android:inputType="number"
                     android:text="1000"
                     android:paddingLeft="20dp" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="Email receive notification"
-                    />
 
-                <EditText
-                    android:id="@+id/ed_notification_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:background="@drawable/backgroud_white_border_4dp"
-                    android:ems="10"
-                    android:text="email@email.com"
-                    android:paddingLeft="20dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -214,7 +187,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/ed_nu_interaction"
+                    android:id="@+id/txtInteraction"
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@drawable/backgroud_white_border_4dp"
@@ -228,73 +201,38 @@
                     android:text="Gender"
                     />
                 <RadioGroup
-                    android:id="@+id/rdg_gender"
+                    android:id="@+id/rdgGender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     >
+
                     <RadioButton
-                        android:id="@+id/rd_gender_male"
+                        android:id="@+id/rdMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
+                        android:checked="true"
                         android:paddingHorizontal="@dimen/dp_10"
                         android:text="Male"
-                        />
+                        android:textColor="@color/gray_color" />
+
                     <RadioButton
-                        android:id="@+id/rd_gender_female"
+                        android:id="@+id/rdFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
+                        android:checked="false"
                         android:paddingHorizontal="@dimen/dp_10"
                         android:text="Female"
-                        />
-                    <RadioButton
-                        android:id="@+id/rd_gender_other"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
-                        android:paddingHorizontal="@dimen/dp_10"
-                        android:text="Other"
-                        />
+                        android:textColor="@color/gray_color" />
 
-                </RadioGroup>
-                <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
-                android:text="mariage status"
-                />
-                <RadioGroup
-                    android:id="@+id/rdg_mariage_status"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
                     <RadioButton
-                        android:id="@+id/rd_single"
+                        android:id="@+id/rdOther"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
-                        android:paddingHorizontal="@dimen/dp_10"
-                        android:text="Single"
-                        />
-                    <RadioButton
-                        android:id="@+id/rd_Married"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
-                        android:paddingHorizontal="@dimen/dp_10"
-                        android:text="Married"
-                        />
-                    <RadioButton
-                        android:id="@+id/rd_mariage_other"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/gray_color"
+                        android:checked="false"
                         android:paddingHorizontal="@dimen/dp_10"
                         android:text="Other"
-                        />
+                        android:textColor="@color/gray_color" />
 
                 </RadioGroup>
 
@@ -306,7 +244,7 @@
                     />
 
                 <Spinner
-                    android:id="@+id/spinner_career"
+                    android:id="@+id/spnJob"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
                     android:entries="@array/career"
@@ -318,7 +256,7 @@
                     android:gravity="center_horizontal"
                     >
                     <Button
-                        android:id="@+id/btn_cancel"
+                        android:id="@+id/btnSave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Save information"
@@ -329,7 +267,7 @@
                     android:paddingHorizontal="@dimen/dp_10"
                     />
                     <Button
-                        android:id="@+id/btn_save"
+                        android:id="@+id/btnCancel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cancel"

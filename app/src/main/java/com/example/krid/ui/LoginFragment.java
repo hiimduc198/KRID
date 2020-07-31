@@ -86,7 +86,7 @@ public class LoginFragment extends Fragment {
                         SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
                         SharedPreferences.Editor editor = pref.edit();
                         editor.putString(Constants.PREF_KEY_SESSION_ID, inf.getId());
-                        editor.putString(Constants.PREF_KEY_SESSION_USERNAME, inf.getUsername());
+                        editor.putString(Constants.PREF_KEY_SESSION_NAME, inf.getName());
                         editor.commit();
 
                         Intent intent = new Intent(getContext(), InfluenceActivity.class);
@@ -113,12 +113,12 @@ public class LoginFragment extends Fragment {
                             if(task.getResult().isEmpty()) {
                                 Toast.makeText(requireActivity(),"Wrong username or password", Toast.LENGTH_LONG).show();
                             } else {
-                                Advertiser adv = task.getResult().toObjects(Advertiser.class).get(0);
+                                Advertiser inf = task.getResult().toObjects(Advertiser.class).get(0);
 
                                 SharedPreferences pref = getContext().getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);
                                 SharedPreferences.Editor editor = pref.edit();
-                                editor.putString(Constants.PREF_KEY_SESSION_ID, adv.getId());
-                                editor.putString(Constants.PREF_KEY_SESSION_USERNAME, adv.getUsername());
+                                editor.putString(Constants.PREF_KEY_SESSION_ID, inf.getId());
+                                editor.putString(Constants.PREF_KEY_SESSION_NAME, inf.getName());
                                 editor.commit();
 
                                 Intent intent = new Intent(getContext(), AdvertiserActivity.class);

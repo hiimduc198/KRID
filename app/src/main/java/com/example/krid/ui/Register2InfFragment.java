@@ -53,11 +53,9 @@ public class Register2InfFragment extends Fragment {
         btnComplete = root.findViewById(R.id.btnComplete);
 
         inf = (Influencer)getArguments().getSerializable("param");
-        db = FirebaseFirestore.getInstance();
 
         final List<Job> list = new ArrayList<>();
-
-        db.collection("Job").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        FirebaseFirestore.getInstance().collection("Job").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {

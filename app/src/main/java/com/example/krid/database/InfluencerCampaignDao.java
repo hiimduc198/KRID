@@ -1,10 +1,8 @@
 package com.example.krid.database;
 
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 
-import com.example.krid.model.Influencer;
+import com.example.krid.model.InfluencerCampaign;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
@@ -12,12 +10,12 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class InfluencerDao {
+public class InfluencerCampaignDao {
     public static FirebaseFirestore db = FirebaseFirestore.getInstance();
-    public static CollectionReference collection = db.collection("Influencer");
+    public static CollectionReference collection = db.collection("InfluencerCampaign");
 
-    public static void addNewInfluencer(Influencer inf) {
-        collection.add(inf)
+    public static void addNewInfluencerCampaign(InfluencerCampaign ic) {
+        collection.add(ic)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
@@ -30,14 +28,5 @@ public class InfluencerDao {
                     public void onFailure(@NonNull Exception e) {
                     }
                 });
-    }
-
-    public static void editInfluencer(Influencer inf) {
-        collection.document(inf.getId()).set(inf)
-            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void aVoid) {
-                }
-            });
     }
 }

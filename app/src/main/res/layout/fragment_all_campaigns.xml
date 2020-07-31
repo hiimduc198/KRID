@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".ui.CampaignFragment">
+        tools:context=".ui.AllCampaignFragment">
 
         <ImageView
             android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chien dich moi" />
+            android:text="Hot campaigns" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvCampaign"

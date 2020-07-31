@@ -1,6 +1,7 @@
-package com.example.krid.adapter.campaignadapter;
+package com.example.krid.adapter;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.krid.ui.InfluenceActivity;
 import com.example.krid.ui.MainActivity;
 import com.example.krid.R;
 import com.example.krid.model.Campaign;
 import com.example.krid.model.CampaignStatus;
 import com.example.krid.model.City;
-import com.example.krid.ui.CampaignDetailGuestFragment;
+import com.example.krid.ui.CampaignDetailFragment;
+import com.example.krid.util.Constants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
@@ -26,7 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
-public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdapter.ViewHolder> {
+public class AllCampaignsAdapter extends RecyclerView.Adapter<AllCampaignsAdapter.ViewHolder> {
     private Activity activity;
     private ArrayList<Campaign> campaignList;
 
@@ -45,7 +48,7 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
         }
     }
 
-    public CampaignGuestAdapter(Activity activity, ArrayList<Campaign> campaignList) {
+    public AllCampaignsAdapter(Activity activity, ArrayList<Campaign> campaignList) {
         this.activity = activity;
         this.campaignList = campaignList;
     }
@@ -54,7 +57,7 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(activity);
-        View campaignItemView = inflater.inflate(R.layout.item_campaign, parent, false);
+        View campaignItemView = inflater.inflate(R.layout.item_all_campaigns, parent, false);
         ViewHolder viewHolder = new ViewHolder(campaignItemView);
         return viewHolder;
     }
@@ -93,10 +96,18 @@ public class CampaignGuestAdapter extends RecyclerView.Adapter<CampaignGuestAdap
                 .fitCenter()
                 .into(holder.imgCampaign);
 
+        SharedPreferences pref = activity.getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
+        final String sessionInfId = pref.getString(Constants.PREF_KEY_SESSION_ID, "");
+
         holder.imgCampaign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)activity).navigateToFragmentWithArgs(new CampaignDetailGuestFragment(), cam);
+                if(sessionInfId.equals("")) {
+                    ((MainActivity)activity).navigateToFragmentWithArgs(new CampaignDetailFragment(), cam);
+                } else {
+                    ((InfluenceActivity)activity).navigateToFragmentWithArgs(new CampaignDetailFragment(), cam);
+                }
+
             }
         });
     }

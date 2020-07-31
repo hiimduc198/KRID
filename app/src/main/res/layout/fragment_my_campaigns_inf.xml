@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AllCampaignFragment">
+    android:background="?android:windowBackground"
+    tools:context=".ui.MyCampaignInfFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleMyCampaign"
+        android:id="@+id/rsvMyCampaigns"
         android:layout_width="409dp"
-        android:layout_height="677dp"
+        android:layout_height="689dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@ public class Constants {
     public static final String PREF_NAME_INFLUENCE = "PreInf";
     public static final String PREF_NAME_ADVERTISER = "PreAdv";
     public static final int PRIVATE_MODE = 0;
-    public static final String PREF_KEY_SESSION_USERNAME = "sessionUser";
+    public static final String PREF_KEY_SESSION_NAME = "sessionName";
     public static final String PREF_KEY_SESSION_ID = "sessionId";
 
 

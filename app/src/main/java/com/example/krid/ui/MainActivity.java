@@ -1,13 +1,17 @@
 package com.example.krid.ui;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.krid.R;
+import com.example.krid.util.Constants;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
-import com.example.krid.R;
+
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -44,13 +48,31 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_booking, R.id.nav_campaign, R.id.nav_login, R.id.nav_register1, R.id.nav_register2_adv, R.id.nav_register2_inf, R.id.adv_create_campaign,
-                R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign, R.id.adv_booking)
+                R.id.nav_home, R.id.nav_booking, R.id.nav_campaign, R.id.nav_login, R.id.nav_register1, R.id.nav_register2_adv, R.id.nav_register2_inf)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        SharedPreferences pref1 = getSharedPreferences(Constants.PREF_NAME_INFLUENCE, Constants.PRIVATE_MODE);
+        String sessionInfId = pref1.getString(Constants.PREF_KEY_SESSION_ID, "");
+        SharedPreferences pref2 = getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);
+        String sessionAdvId = pref2.getString(Constants.PREF_KEY_SESSION_ID, "");
+
+        if(!sessionInfId.equals("")) {
+            SharedPreferences.Editor editor = pref1.edit();
+            editor.remove(Constants.PREF_KEY_SESSION_ID);
+            editor.remove(Constants.PREF_KEY_SESSION_NAME);
+            editor.clear();
+            editor.commit();
+        } else {
+            SharedPreferences.Editor editor = pref2.edit();
+            editor.remove(Constants.PREF_KEY_SESSION_ID);
+            editor.remove(Constants.PREF_KEY_SESSION_NAME);
+            editor.clear();
+            editor.commit();
+        }
     }
 
     @Override
