@@ -1,20 +1,22 @@
 package com.example.krid.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Kol {
+public class Kol implements Serializable {
     private String id;
     private String name;
     private Date dob;
     private String cityId;
     private String facebook;
-    private String facebookFollowers;
-    private String numOfInteractions;
-    private int gender;
+    private int facebookFollowers;
+    private int numOfInteractions;
+    private String gender;
     private String jobId;
     private String groupId;
     private String description;
     private String image;
+    private String phone;
 
     public Kol() {
     }
@@ -25,7 +27,7 @@ public class Kol {
         this.image = image;
     }
 
-    public Kol(String id, String name, Date dob, String cityId, String facebook, String facebookFollowers, String numOfInteractions, int gender, String jobId, String groupId, String description, String image) {
+    public Kol(String id, String name, Date dob, String cityId, String facebook, int facebookFollowers, int numOfInteractions, String gender, String jobId, String groupId, String description, String image) {
         this.id = id;
         this.name = name;
         this.dob = dob;
@@ -60,15 +62,15 @@ public class Kol {
         this.facebook = facebook;
     }
 
-    public void setFacebookFollowers(String facebookFollowers) {
+    public void setFacebookFollowers(int facebookFollowers) {
         this.facebookFollowers = facebookFollowers;
     }
 
-    public void setNumOfInteractions(String numOfInteractions) {
+    public void setNumOfInteractions(int numOfInteractions) {
         this.numOfInteractions = numOfInteractions;
     }
 
-    public void setGender(int gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -82,6 +84,22 @@ public class Kol {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public String getId() {
@@ -104,15 +122,15 @@ public class Kol {
         return facebook;
     }
 
-    public String getFacebookFollowers() {
+    public int getFacebookFollowers() {
         return facebookFollowers;
     }
 
-    public String getNumOfInteractions() {
+    public int getNumOfInteractions() {
         return numOfInteractions;
     }
 
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 

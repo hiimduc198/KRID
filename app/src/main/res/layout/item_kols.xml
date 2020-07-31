@@ -24,7 +24,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/kols_image"
+                    android:id="@+id/imgKol"
                     android:layout_width="wrap_content"
                     android:layout_height="197dp"
                     android:layout_marginTop="5dp"
@@ -38,8 +38,8 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/kols_name"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
                         android:layout_height="44dp"
                         android:layout_gravity="center"
                         android:fontFamily="@font/cherry_swash_bold"
@@ -50,9 +50,9 @@
                         android:textColorHighlight="#FFFFFF" />
 
                     <TextView
-                        android:id="@+id/kols_description"
+                        android:id="@+id/txtDescription"
                         android:layout_width="match_parent"
-                        android:layout_height="71dp"
+                        android:layout_height="75dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:fontFamily="@font/cagliostro"
@@ -64,7 +64,7 @@
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/btn_contact_kols"
+                        android:id="@+id/btnCall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.krid.R;
-import com.example.krid.adapter.campaignadapter.CampaignGuestAdapter;
+import com.example.krid.adapter.AllCampaignsAdapter;
 import com.example.krid.database.CampaignDao;
 import com.example.krid.model.Campaign;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,7 +34,7 @@ public class MyCampaignFragment extends Fragment {
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private CampaignGuestAdapter campaignGuestAdapter;
+    private AllCampaignsAdapter campaignGuestAdapter;
 
     private RecyclerView rcvCampaign;
     private ArrayList<Campaign> listCampaign = new ArrayList<Campaign>();
@@ -62,9 +62,9 @@ public class MyCampaignFragment extends Fragment {
                             public void onSuccess(Uri uri) {
                                 cam.setImage(uri.toString());
                                 listCampaign.add(cam);
-                                campaignGuestAdapter = new CampaignGuestAdapter(getActivity(), listCampaign);
+                                campaignGuestAdapter = new AllCampaignsAdapter(getActivity(), listCampaign);
                                 rcvCampaign.setAdapter(campaignGuestAdapter);
-                                rcvCampaign.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+                                rcvCampaign.setLayoutManager(new GridLayoutManager(getActivity(), 1));
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override

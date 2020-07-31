@@ -1,6 +1,7 @@
 package com.example.krid.ui;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,28 +10,39 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.krid.R;
-import com.example.krid.adapter.CampaignAdapter;
-import com.example.krid.adapter.KolsAdapter;
-import com.example.krid.model.Campaign;
+
+import com.example.krid.adapter.BookKolsAdvAdapter;
 import com.example.krid.model.Kol;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
 public class BookingAdvFragment extends Fragment {
-    private ArrayList<Kol> kolList ;
-    private RecyclerView recyclerViewBookingKol;
-    private KolsAdapter kolsAdapter;
+    private ArrayList<Kol> listKol ;
+    private RecyclerView rcvKol;
+    private BookKolsAdvAdapter advAdapter;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View root = inflater.inflate(R.layout.fragment_booking_adv, container, false);
-        recyclerViewBookingKol = root.findViewById(R.id.recycleBookingKol);
+        rcvKol = root.findViewById(R.id.recycleBookingKol);
 
         displayAllKols();
         return root;
@@ -43,17 +55,33 @@ public class BookingAdvFragment extends Fragment {
     }
 
     private void displayAllKols() {
-        kolList = new ArrayList<Kol>();
-        kolList.add(new Kol("GetLozzw", "#HotFace #Sporty", "Getlozze"));
-        kolList.add(new Kol("GetLozzw", "#HotFace #Sporty", "Getlozze"));
-        kolList.add(new Kol("GetLozzw", "#HotFace #Sporty", "Getlozze"));
-        kolList.add(new Kol("GetLozzw", "#HotFace #Sporty", "Getlozze"));
-        kolList.add(new Kol("GetLozzw", "#HotFace #Sporty", "Getlozze"));
-        kolList.add(new Kol("GetLozzw", "#HotFace #Sporty", "Getlozze"));
+        listKol = new ArrayList<Kol>();
 
-        kolsAdapter = new KolsAdapter(getActivity(), kolList);
-
-        recyclerViewBookingKol.setAdapter(kolsAdapter);
-        recyclerViewBookingKol.setLayoutManager(new LinearLayoutManager(getActivity()));
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        final StorageReference imgsRef = storage.getReference().child("Kols");
+        FirebaseFirestore.getInstance().collection("Kol").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        final Kol kol = document.toObject(Kol.class);
+                        imgsRef.child(kol.getImage()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                kol.setImage(uri.toString());
+                                listKol.add(kol);
+                                advAdapter = new BookKolsAdvAdapter(getActivity(), listKol);
+                                rcvKol.setAdapter(advAdapter);
+                                rcvKol.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                            }
+                        });
+                    }
+                }
+            }
+        });
     }
 }

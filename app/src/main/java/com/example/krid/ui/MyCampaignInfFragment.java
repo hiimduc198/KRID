@@ -73,7 +73,7 @@ public class MyCampaignInfFragment extends Fragment {
                                             campaigns.add(cam);
                                             MyCampaignsAdapter camAdapter = new MyCampaignsAdapter(getActivity(), campaigns, infStatusIds);
                                             rsvMyCampaigns.setAdapter(camAdapter);
-                                            rsvMyCampaigns.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+                                            rsvMyCampaigns.setLayoutManager(new GridLayoutManager(getActivity(), 1));
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
