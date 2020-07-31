@@ -1,5 +1,6 @@
 package com.example.krid.ui;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.krid.R;
+import com.example.krid.util.Constants;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -45,9 +47,15 @@ public class AdvertiserActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.adv_create_campaign, R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign_adv, R.id.adv_account, R.id.adv_mycampaign_account)
+                R.id.adv_create_campaign, R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign, R.id.adv_booking, R.id.adv_mycampaign_account)
                 .setDrawerLayout(drawer)
                 .build();
+
+        SharedPreferences pref = getSharedPreferences(Constants.PREF_NAME_ADVERTISER, Constants.PRIVATE_MODE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(Constants.PREF_KEY_SESSION_ID,"5JORX9EDu8UjUnW08V2w");
+        editor.commit();
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_adv);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);

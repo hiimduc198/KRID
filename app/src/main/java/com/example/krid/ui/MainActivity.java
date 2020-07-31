@@ -4,11 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
-import com.example.krid.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
-
+import com.example.krid.R;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_booking, R.id.nav_campaign, R.id.nav_login, R.id.nav_register1, R.id.nav_register2_adv, R.id.nav_register2_inf, R.id.adv_create_campaign,
-                R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign_adv, R.id.adv_account)
+                R.id.adv_home, R.id.adv_logout, R.id.adv_manage_delivery, R.id.adv_mycampaign, R.id.adv_booking)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

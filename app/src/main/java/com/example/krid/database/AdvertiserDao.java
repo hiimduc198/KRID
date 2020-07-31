@@ -25,6 +25,10 @@ public class AdvertiserDao {
     public static FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static CollectionReference collection = db.collection("Advertiser");
 
+    public static void updateAdvertiser(Advertiser adv){
+
+    }
+
     public static void addNewAdvertiser(Advertiser adv) {
         collection.add(adv)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

@@ -22,8 +22,8 @@
         tools:layout="@layout/fragment_create_campaign" />
 
     <fragment
-        android:id="@+id/adv_mycampaign_adv"
-        android:name="com.example.krid.ui.CampaignFragment"
+        android:id="@+id/adv_mycampaign"
+        android:name="com.example.krid.ui.MyCampaignAdvFragment"
         android:label="Advertise Campaign"
         tools:layout="@layout/fragment_mycampaignadv" />
     <fragment

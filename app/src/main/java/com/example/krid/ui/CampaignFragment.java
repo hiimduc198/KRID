@@ -45,7 +45,7 @@ public class CampaignFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Campaigns.");
+        ((AdvertiserActivity)getActivity()).getSupportActionBar().setTitle("Campaigns.");
 
         View root = inflater.inflate(R.layout.fragment_campaign, container, false);
         rcvIntroSlide = root.findViewById(R.id.rcvSlideIntro);

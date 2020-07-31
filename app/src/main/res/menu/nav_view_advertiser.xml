@@ -25,12 +25,14 @@
             android:icon="@drawable/ic_menu_manage_delivery"
             android:title="@string/menu_manage_delivery" />
         <item
-            android:id="@+id/adv_account"
+            android:id="@+id/adv_mycampaign_account"
             android:icon="@drawable/ic_menu_account"
             android:title="@string/menu_account" />
+
         <item
             android:id="@+id/adv_logout"
             android:icon="@drawable/ic_menu_logout"
             android:title="@string/menu_logout" />
+
     </group>
 </menu>

@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
                 android:orientation="vertical"
-                android:visibility="gone"
+
                 tools:visibility="visible">
                 <TextView
                     android:layout_width="match_parent"
@@ -94,14 +94,6 @@
                     android:inputType="textPersonName"
                     android:paddingLeft="20dp" />
 
-                <CheckBox
-                    android:id="@+id/checkIndividual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:text="Individual" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,14 +111,6 @@
                     android:text="Website.com"
                     android:paddingLeft="20dp" />
 
-                <CheckBox
-                    android:id="@+id/checkWebsite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:text="Doesn't have a website" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -174,68 +158,9 @@
                     android:layout_height="41dp"
                     android:entries="@array/field_register"
                     />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="What campaign do you care of ? "
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:id="@+id/cb_checkin_account_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dimen_100dp"
-                        android:text="Check-in" />
-                    <CheckBox
-                        android:id="@+id/cb_product_account_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:layout_gravity="right"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:text="Product" />
 
-                </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:text="Your purpose when running an Influencer campaign? "
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:id="@+id/cb_branding_viral"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginRight="68dp"
-                        android:text="Branding/viral" />
-
-                    <CheckBox
-                        android:id="@+id/cb_sale"
-                        android:layout_width="71dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_marginLeft="@dimen/dp_10"
-                        android:layout_marginTop="7dp"
-                        android:text="Sale" />
-
-                </LinearLayout>
             <Button
+                android:id="@+id/btn_save_adv_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save information"

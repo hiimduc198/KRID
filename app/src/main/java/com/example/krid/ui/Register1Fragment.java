@@ -61,7 +61,6 @@ public class Register1Fragment extends Fragment {
                 ((MainActivity) requireActivity()).navigateToFragmentWithoutArgs(new LoginFragment());
             }
         });
-
         return root;
     }
 
